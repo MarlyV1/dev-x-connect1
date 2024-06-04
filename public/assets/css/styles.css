@@ -23,6 +23,10 @@ body {
   align-items: left;
   font-size: 16px;
   font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url(../images/bg-1.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
 
 h1 {
