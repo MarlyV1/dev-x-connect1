@@ -1,0 +1,66 @@
+/* utility classes */
+:root {
+  --primary-color: ;
+  --secondary-color: ;
+  --primary-color-transparent: ;
+}
+
+/* Font for logo, titles, and buttons */
+.nanum-gothic-coding-regular {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* main page style */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  font-size: 16px;
+  font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 51px;
+}
+
+.welcome-header {
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+.connect-header {
+  text-align: center;
+  letter-spacing: 2px;
+  padding-bottom: 50px;
+}
+
+.sign-in {
+  background-color: rgb(75, 118, 138);
+  color: white;
+  border: none;
+}
+
+.sign-up {
+  background-color: rgb(83, 138, 83);
+  border: none;
+}
+
+.card-title {
+  font-size: 22px;
+}
+
+.card-text {
+  line-height: 1.4;
+}
