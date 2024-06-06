@@ -10,3 +10,5 @@ Profile.hasMany(Post, {
     foreignKey: 'profile_id',
     onDelete: 'CASCADE'
 })
+
+module.exports = { Post, Profile };
