@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-post {
+    width: 70%;
+    margin: 70px auto;
+    border: thin solid rgba(192, 192, 192, 0.685);
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(12, 75, 234, 0.592);
+
+}
+
+
+.nav-item {
+   display: flex;
+   justify-content: space-around;
+   width: 50%;
+}
+
+.nav-link {
+    width: 100%;
+    font-weight: bold;
+}
+
+#editor {
+    border-radius: 0px;
+    min-height: 200px;
+}
+
+#editor .ql-editor {
+    min-height: inherit;
+}
