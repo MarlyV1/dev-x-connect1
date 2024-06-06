@@ -42,7 +42,7 @@ Profile.init(
         },
     },
     {
-        //add hooks and encryption for password above
+        //add hooks and encryption for password 
         hooks: {
             beforeCreate: async (newUserData) => {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);

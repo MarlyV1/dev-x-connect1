@@ -23,7 +23,15 @@ Post.init(
         },
         date_of_post: {
             type: DataTypes.DATE,
-        }
+        },
+        profile_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Profile',
+                key: 'id',
+                unique: false,
+            },
+        },
     },
     {
         sequelize,
