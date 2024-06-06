@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const Profile = require("../../models")
 //route to create new user
 router.post('/signup', async (req,res) => {
   const profileData = await Profile.create(req.body)
