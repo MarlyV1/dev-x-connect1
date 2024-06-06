@@ -73,3 +73,7 @@ h2 {
 .card-text {
   line-height: 1.4;
 }
+
+.sidebar {
+  width: 100%;
+}
