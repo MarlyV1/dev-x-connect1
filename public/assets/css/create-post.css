@@ -21,3 +21,12 @@ body {
     width: 100%;
     font-weight: bold;
 }
+
+#editor {
+    border-radius: 0px;
+    min-height: 200px;
+}
+
+#editor .ql-editor {
+    min-height: inherit;
+}
