@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Profile extends Model {
+//creating and initializing Profile(table in db) from Model class
+class Profile extends Model {}
 
-}
-
+//setting columns + datatypes & rules
 Profile.init(
     {
         id: {
@@ -42,7 +42,15 @@ Profile.init(
     },
     {
         //add hooks and encryption for password above
+        hooks: {
+
+        },
+            sequelize,
+            timestamps: true,
+            freezeTableName: true,
+            underscored: true,
+            modelName: 'post',
     }
 );
 
-module.exports
+module.exports = Profile;
