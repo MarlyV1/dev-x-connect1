@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>devXConnect</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+    <header>
+        
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+        <div class="container-fluid d-flex justify-content-end">
+            <a class="navbar-brand me-auto" href="homepage.html">
                 <img src="" alt="devXConnect logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">+Post</a>
+                        <a class="nav-link" href="create-post.html">+Post</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">My Profile</a>
@@ -35,14 +38,73 @@
                     </li>
                 <ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search for user..." aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-    <aside>
-        <ul>
+    </header>
+    <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+              Communities
+            </button>
+            <div class="collapse" id="home-collapse" style="">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">JavaScript</a></li>
+                <li><a href="#" class="link-dark rounded">CSS</a></li>
+                <li><a href="#" class="link-dark rounded">Express.js</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+              Phases
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Phase One</a></li>
+                <li><a href="#" class="link-dark rounded">Phase Two</a></li>
+                <li><a href="#" class="link-dark rounded">Phase Three</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+              Networking
+            </button>
+            <div class="collapse" id="orders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+              Resources
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New...</a></li>
+                <li><a href="#" class="link-dark rounded">Profile</a></li>
+                <li><a href="#" class="link-dark rounded">Settings</a></li>
+                <li><a href="#" class="link-dark rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <!-- <aside>
+        <div class="flex-shrink-0 bg-white" style="width:280px;"> 
+        <ul class="list-unstyled">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                Communities
+              </button>
             <li>Communities
                 <ul>
                     <li>JavaScript</li>
@@ -59,7 +121,8 @@
             <li>Networking</li>
             <li>Resources</li>
         </ul>
-    </aside>
+        </div>
+    </aside> -->
     <main>
         
     </main>

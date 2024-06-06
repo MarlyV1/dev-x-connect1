@@ -30,6 +30,10 @@ body {
   color: white;
 }
 
+nav{
+  width: 100%;
+}
+
 h1 {
   font-size: 51px;
 }
