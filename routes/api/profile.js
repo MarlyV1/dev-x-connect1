@@ -7,8 +7,18 @@ router.post('/signup', async (req,res) => {
 
 //route to login existing user
 router.post('/login', async (req,res) => {
-  const profileData = await Profile.findOne({where: {}})
+  const profileData = await Profile.findOne({where: {username:req.body.username}})
+  if(!profileData){
+    res.status(400).json({message:"incorrect username"})
+    return
+  }
+  const checkpassword = await profileData.validatePassword(req.body.password)
+  if(!checkpassword){
+    res.status(400).json({message:"incorrect password"})
+    return
+  }
 })
+
 
 //route to find profile
 router.get('/members/:id' , (req,res) => {
