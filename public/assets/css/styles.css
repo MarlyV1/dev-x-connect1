@@ -52,26 +52,38 @@ h2 {
 .connect-header {
   text-align: center;
   letter-spacing: 2px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
-.sign-in {
-  background-color: rgb(75, 118, 138);
+.sign-up-card,
+.sign-in-card {
+  height: 260px;
+  background-color: rgb(19, 18, 66, .9);
+  color: white;
+  box-shadow: 0 0 50px 10px #48abe0;
+}
+
+.sign-in-btn {
+  background-color: rgb(75, 118, 138,);
   color: white;
   border: none;
 }
 
-.sign-up {
+.sign-up-btn {
   background-color: rgb(83, 138, 83);
   border: none;
 }
 
 .card-title {
-  font-size: 22px;
+  font-size: 26px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .card-text {
   line-height: 1.4;
+  padding-bottom: 20px;
+  font-size: 19px;
 }
 
 .sidebar {
