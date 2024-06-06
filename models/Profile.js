@@ -1,10 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class Profile extends Model {
+//creating and initializing Profile(table in db) from Model class
+class Profile extends Model {}
 
-}
-
+//setting columns + datatypes & rules
 Profile.init(
     {
         id: {
@@ -41,8 +42,22 @@ Profile.init(
         },
     },
     {
-        //add hooks and encryption for password above
+        //add hooks and encryption for password 
+        hooks: {
+            beforeCreate: async (newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            },
+            beforeUpdate: async (updatedUserData) => {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            },
+        },
+            sequelize,
+            freezeTableName: true,
+            underscored: true,
+            modelName: 'profile',
     }
 );
 
-module.exports
+module.exports = Profile;
