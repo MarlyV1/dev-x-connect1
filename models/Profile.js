@@ -6,12 +6,7 @@ const bcrypt = require('bcrypt');
 class Profile extends Model {
 async validatePassword(password){
 return await bcrypt.compare(password,this.password)
-
-
-}
-
-
-}
+}};
 
 //setting columns + datatypes & rules
 Profile.init(
@@ -58,7 +53,7 @@ Profile.init(
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: 'profile',
+            modelName: 'Profile',
     }
 );
 
