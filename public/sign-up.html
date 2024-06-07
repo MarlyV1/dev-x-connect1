@@ -13,37 +13,49 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- animations library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- tab/favorites icon -->
+    <link rel="icon" href="./assets/images/icons/tab-icon.png" type="image/x-icon"/>
     <title>Sign Up</title>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="devXConnect logo" width="30" height="24">
+            <img src="./assets/images/logo.png" alt="devXConnect logo" width="30" height="30">
+          </a>
+          <a class="navbar-brand" href="index.html">
+            <p class="nanum-gothic-coding-regular">devXConnect</p>
           </a>
           <a href="#" class="btn btn-primary nanum-gothic-coding-regular about-us-btn">About Us</a>
         </div>
     </nav>
     <main>
+        <div>
+            <h2 class="connect-header sign-page-header animate__animated animate__zoomIn">Sign Up for your Free devXConnect Account</h2>
+        </div>
         <div class="card sign-up-page-card sign-up-card col-sm-5 animate__animated animate__slideInUp">
             <div class="card-body">
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" aria-label="Full name">
+                        <label for="firstName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" aria-label="First name">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Username</label>
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" aria-label="Last name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="userName" aria-label="username">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" aria-label="password">
                     </div>
                     <a href="homepage.html" class="btn btn-primary nanum-gothic-coding-regular sign-up-btn">signUp()</a>
                 </form>
-              <div class="other-page-link">
-                <p>Already have an account? <a href="sign-in.html">signIn()</a></p>
+              <div class="other-page-message">
+                <p>Already have an account? <a href="sign-in.html" class="other-page-link">signIn()</a></p>
               </div>
             </div>
         </div>
