@@ -12,7 +12,7 @@
     font-style: normal;
   }
 
-/* main page style */
+/* index.html and nav style */
 * {
   box-sizing: border-box;
 }
@@ -25,9 +25,24 @@ body {
   font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-image: url(../images/bg-1.jpg);
   background-position: center;
+  
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+}
+
+nav{
+  width: 100%;
+}
+
+.about-us-btn {
+  background-color: rgb(19, 18, 66);
+  border: none;
+}
+
+.about-us-btn:hover {
+  box-shadow: 0 0 10px 1px #48abe0;
+  background-color: rgb(19, 18, 66, .9);
 }
 
 h1 {
@@ -48,24 +63,67 @@ h2 {
 .connect-header {
   text-align: center;
   letter-spacing: 2px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
-.sign-in {
-  background-color: rgb(75, 118, 138);
+.sign-up-card,
+.sign-in-card {
+  height: 260px;
+  background-color: rgb(19, 18, 66, .9);
+  color: white;
+  box-shadow: 0 0 50px 10px #48abe0;
+}
+
+.sign-in-btn {
+  background-color: #39b6f0;
   color: white;
   border: none;
 }
 
-.sign-up {
+.sign-up-btn {
   background-color: rgb(83, 138, 83);
   border: none;
 }
 
+.sign-in-btn:hover {
+  background-color: rgb(75, 118, 138, .7);
+  box-shadow: 0 0 30px 5px #48abe0;
+}
+
+.sign-up-btn:hover{
+  background-color: rgb(83, 138, 83, .7);
+  box-shadow: 0 0 30px 5px #48abe0;
+}
 .card-title {
-  font-size: 22px;
+  font-size: 26px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .card-text {
   line-height: 1.4;
+  padding-bottom: 20px;
+  font-size: 19px;
+}
+
+/* sign-in and dsign-up pages styling */
+.sign-in-page-card,
+.sign-up-page-card {
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.sign-up-page-card{
+  height: 345px;
+}
+
+.other-page-link{
+ padding-top: 25px;
+ font-size: 14px;
+}
+
+/* Homepage styling */
+.sidebar {
+  width: 100%;
 }

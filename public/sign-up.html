@@ -18,37 +18,31 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="devXConnect logo" width="30" height="24">
           </a>
-          <button class="btn me-2 nanum-gothic-coding-regular sign-in" type="button">signIn()</button>
+          <a href="#" class="btn btn-primary nanum-gothic-coding-regular about-us-btn">About Us</a>
         </div>
     </nav>
     <main>
-        <div class="card">
+        <div class="card sign-up-page-card sign-up-card col-sm-5 animate__animated animate__slideInUp">
             <div class="card-body">
-            <form>
-                <div class="row">
-                    <div class="col">
+                <form>
+                    <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Full Name</label>
                         <input type="text" class="form-control" aria-label="Full name">
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="userName" aria-label="username">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" aria-label="password">
-                </div>
-                <!-- <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
-                <button type="submit" class="btn btn-primary">signUp()</button>
-              </form>
-              <div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="userName" aria-label="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" aria-label="password">
+                    </div>
+                    <a href="homepage.html" class="btn btn-primary nanum-gothic-coding-regular sign-up-btn">signUp()</a>
+                </form>
+              <div class="other-page-link">
                 <p>Already have an account? <a href="sign-in.html">signIn()</a></p>
               </div>
             </div>

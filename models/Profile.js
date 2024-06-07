@@ -3,11 +3,7 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 //creating and initializing Profile(table in db) from Model class
-class Profile extends Model {
-    checkPassword(loginPw){
-        return bcrypt.compareSync(loginPw, this.password);
-    }
-}
+class Profile extends Model {}
 
 //setting columns + datatypes & rules
 Profile.init(

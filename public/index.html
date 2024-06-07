@@ -13,15 +13,22 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- animations library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>devXConnect</title>
+    <title>Welcome to devXConnect</title>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="devXConnect logo" width="30" height="24">
           </a>
-          <a href="sign-in.html" class="btn btn-primary nanum-gothic-coding-regular sign-in">signIn()</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn-primary nanum-gothic-coding-regular about-us-btn">About Us</a>
         </div>
     </nav>
     <main>
@@ -31,20 +38,20 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-sm-5 mb-3 mb-sm-0 ">
-              <div class="card animate__animated animate__slideInUp">
+              <div class="card text-center animate__animated animate__slideInUp sign-up-card">
                 <div class="card-body">
                   <h3 class="card-title">First Time?</h3>
                   <p class="card-text">Sign up for free and start building your coding community.</p>
-                  <a href="sign-up.html" class="btn btn-primary nanum-gothic-coding-regular sign-up">signUp()</a>
+                  <a href="sign-up.html" class="btn btn-primary nanum-gothic-coding-regular sign-up-btn">signUp()</a>
                 </div>
               </div>
             </div>
             <div class="col-sm-5">
-              <div class="card animate__animated animate__slideInUp">
+              <div class="card text-center animate__animated animate__slideInUp sign-in-card">
                 <div class="card-body">
                   <h3 class="card-title">Back for More?</h3>
-                  <p class="card-text">Sign in to keep the conversations going and the code flowing.</p>
-                  <a href="sign-in.html" class="btn btn-primary nanum-gothic-coding-regular sign-in">signIn()</a>
+                  <p class="card-text">Sign in to keep the conversation going and the code flowing.</p>
+                  <a href="sign-in.html" class="btn btn-primary nanum-gothic-coding-regular sign-in-btn">signIn()</a>
                 </div>
               </div>
             </div>
