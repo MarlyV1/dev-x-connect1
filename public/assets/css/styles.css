@@ -25,7 +25,6 @@ body {
   font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-image: url(../images/bg-1.jpg);
   background-position: center;
-  
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -115,12 +114,26 @@ h2 {
 }
 
 .sign-up-page-card{
-  height: 345px;
+  height: 425px;
 }
 
-.other-page-link{
+.other-page-message {
  padding-top: 25px;
  font-size: 14px;
+}
+
+.other-page-link {
+ text-decoration: none;
+ color: #39b6f0;
+}
+
+.other-page-link:hover {
+  color: #39b6f0c6;
+}
+
+.sign-page-header {
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 /* Homepage styling */
