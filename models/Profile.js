@@ -53,7 +53,7 @@ Profile.init(
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: 'profile',
+            modelName: 'Profile',
     }
 );
 
