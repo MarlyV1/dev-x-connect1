@@ -157,11 +157,12 @@ h2 {
 /* About me page styling */
 
 .card-content {
-  width: 80%;
-  margin: 90px auto;
-  padding: 20px;
-  height: 420px;
-  background-color: rgb(19, 18, 66);
+  width: 90%;
+  margin: 10% auto;
+  padding: 30px;
+  height: 75%;
+  background-color: rgba(19, 18, 66, 0.959);
   color: white;
   box-shadow: 0 0 50px 10px #48abe0;
 }
+
