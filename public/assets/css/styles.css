@@ -154,3 +154,14 @@ h2 {
   line-height: 1.5;
 }
 
+/* About me page styling */
+
+.card-content {
+  width: 80%;
+  margin: 90px auto;
+  padding: 20px;
+  height: 420px;
+  background-color: rgb(19, 18, 66);
+  color: white;
+  box-shadow: 0 0 50px 10px #48abe0;
+}
