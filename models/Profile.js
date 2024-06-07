@@ -35,12 +35,6 @@ Profile.init(
             allowNull: false,
             unique: true,
         }, 
-        program: { //work on this
-            type: DataTypes.STRING,
-            validate: {
-                isIn: cohortDb,
-            }
-        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
