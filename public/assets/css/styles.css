@@ -34,12 +34,15 @@ nav{
   width: 100%;
 }
 
-.about-us-btn {
+.about-us-btn,
+.search-btn {
   background-color: rgb(19, 18, 66);
   border: none;
+  color: white;
 }
 
-.about-us-btn:hover {
+.about-us-btn:hover,
+.search-btn:hover {
   box-shadow: 0 0 10px 1px #48abe0;
   background-color: rgb(19, 18, 66, .9);
 }
@@ -140,3 +143,14 @@ h2 {
 .sidebar {
   width: 100%;
 }
+
+.btn-toggle:hover {
+  color: #39b6f0;
+}
+
+.link-dark {
+  text-decoration: none;
+  margin-left: 20px;
+  line-height: 1.5;
+}
+
