@@ -12,7 +12,7 @@ return await bcrypt.compare(password,this.password)
 Profile.init(
     {
         id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER, 
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,

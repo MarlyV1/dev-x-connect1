@@ -1,0 +1,32 @@
+[
+    {
+        "first_name": "Marly",
+        "last_name": "Valcin",
+        "username": "MarlyV1",
+        "password":"password123"
+    },
+    {
+        "first_name": "Bethany",
+        "last_name": "Proctor",
+        "username": "BethanyProctor",
+        "password":"password123"
+    },
+    {
+        "first_name": "Saydeez",
+        "last_name": "Reyes",
+        "username": "Saydeezr",
+        "password":"password123"
+    },
+    {
+        "first_name": "Roger",
+        "last_name": "Aponte",
+        "username": "rogretheekyogre",
+        "password":"password123"
+    },
+    {
+        "first_name": "Matthew",
+        "last_name": "Carpenter",
+        "username": "MattCarpenter12",
+        "password":"password123"
+    }
+]

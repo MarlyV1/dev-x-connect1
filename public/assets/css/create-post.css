@@ -11,9 +11,7 @@ body {
     border-radius: 5px;
     padding: 30px;
     box-shadow: 0 0 20px rgba(12, 75, 234, 0.592);
-
 }
-
 
 .nav-item {
    display: flex;
@@ -33,4 +31,14 @@ body {
 
 #editor .ql-editor {
     min-height: inherit;
+}
+
+.submit-post {
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: bold;
 }

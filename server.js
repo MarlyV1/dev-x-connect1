@@ -4,7 +4,9 @@ const session = require('express-session');
 const routes = require('./routes');
 
 const sequelize = require('./config/connection');
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -34,6 +36,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
+
+//Fallback route for when a user attempts to visit a nonexistent route
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'));
+})
+sequelize.sync()
+ .then (() => {app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
+})});
