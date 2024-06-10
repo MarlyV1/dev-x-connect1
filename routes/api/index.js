@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-//imports routes from thei file
+//imports routes from their file
 const profileRoutes = require('./profile');
 const postRoutes = require('./post');
 

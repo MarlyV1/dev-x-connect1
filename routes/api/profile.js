@@ -21,8 +21,16 @@ router.post('/login', async (req,res) => {
 
 
 //route to find profile
-router.get('/members/:id' , (req,res) => {
-    
+router.get('/profile/:username', async (req,res) => {
+    const profileData = await Profile.findOne({
+      where: {username:req.body.username}, 
+      include: [{ model: Post }]
+  });
+    if(!profileData){
+      res.status(404).json({ message: 'User not found'})
+    return;
+  } 
+    res.status(200).json(profileData)
 });
 
 module.exports = router;
