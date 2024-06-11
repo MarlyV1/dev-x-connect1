@@ -23,8 +23,8 @@
             <a class="navbar-brand me-auto" href="homepage.html">
                 <img src="./assets/images/logo.png" alt="devXConnect logo">
             </a>
-            <a class="navbar-brand" href="index.html">
-                <p class="nanum-gothic-coding-regular">devXConnect</p>
+            <a class="navbar-brand" href="homepage.html">
+                <p class="nanum-gothic-coding-regular">devXConnect()</p>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,13 +35,10 @@
                         <a class="nav-link" href="create-post.html">+Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="profile.html">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Out</a>
+                        <a class="nav-link" href="index.html">Sign Out</a>
                     </li>
                 <ul>
                 <form class="d-flex" role="search">
@@ -54,29 +51,44 @@
     </header>
 
     <!-- sidebar -->
-    <div class="flex-shrink-0 p-3 bg-white sidebar" style="width: 280px;">
+    <aside>
+    <div class="container-fluid">
+    <div class="flex-shrink-0 p-3 sidebar">
         <ul class="list-unstyled ps-0">
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-              Communities
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#phase-one-collapse" aria-expanded="false">
+              Phase One
             </button>
-            <div class="collapse" id="home-collapse">
+            <div class="collapse" id="phase-one-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded">JavaScript</a></li>
+                <li><a href="#" class="link-dark rounded">HTML</a></li>
                 <li><a href="#" class="link-dark rounded">CSS</a></li>
-                <li><a href="#" class="link-dark rounded">Express.js</a></li>
+                <li><a href="#" class="link-dark rounded">JavaScript</a></li>
+                <li><a href="#" class="link-dark rounded">APIs</a></li>
               </ul>
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#phases-collapse" aria-expanded="false">
-              Phases
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#phase-two-collapse" aria-expanded="false">
+              Phase Two
             </button>
-            <div class="collapse" id="phases-collapse">
+            <div class="collapse" id="phase-two-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded">Phase One</a></li>
-                <li><a href="#" class="link-dark rounded">Phase Two</a></li>
-                <li><a href="#" class="link-dark rounded">Phase Three</a></li>
+                <li><a href="#" class="link-dark rounded">Node.js</a></li>
+                <li><a href="#" class="link-dark rounded">Express.js</a></li>
+                <li><a href="#" class="link-dark rounded">SQL</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#phase-three-collapse" aria-expanded="false">
+              Phase Three
+            </button>
+            <div class="collapse" id="phase-three-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">NoSQL</a></li>
+                <li><a href="#" class="link-dark rounded">React</a></li>
+                <li><a href="#" class="link-dark rounded">MERN</a></li>
               </ul>
             </div>
           </li>
@@ -92,6 +104,8 @@
           </li>
         </ul>
     </div>
+  </div>
+</aside>
 
     <!-- main page -->
     <main>
