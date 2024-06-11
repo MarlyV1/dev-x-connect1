@@ -52,14 +52,16 @@ nav{
 }
 
 .about-us-btn,
-.search-btn {
+.search-btn,
+.home-btn {
   background-color: #131242;
   border: none;
   color: white;
 }
 
 .about-us-btn:hover,
-.search-btn:hover {
+.search-btn:hover,
+.home-btn:hover {
   box-shadow: 0 0 10px 1px #48abe0;
   background-color: #131242e6;
 }
@@ -93,7 +95,8 @@ h2 {
   box-shadow: 0 0 50px 10px #48abe0;
 }
 
-.sign-in-btn {
+.sign-in-btn,
+.start-now-btn {
   background-color: #39b6f0;
   color: white;
   border: none;
@@ -104,7 +107,8 @@ h2 {
   border: none;
 }
 
-.sign-in-btn:hover {
+.sign-in-btn:hover,
+.start-now-btn:hover {
   background-color: rgb(75, 118, 138, .7);
   box-shadow: 0 0 30px 5px #48abe0;
 }
@@ -181,7 +185,7 @@ h2 {
 /* About me page styling */
 .card-content {
   width: 90%;
-  margin: 10% auto;
+  margin: 50px 50px 0 70px;
   padding: 30px;
   height: 75%;
   background-color: rgba(19, 18, 66, 0.959);
