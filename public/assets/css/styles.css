@@ -140,8 +140,18 @@ h2 {
 }
 
 /* Homepage styling */
+aside {
+  display: flex;
+  flex-flow: column;
+  height: auto;
+  width: 300px;
+  background-color: #f8f9fa;
+}
+
 .sidebar {
-  width: 100%;
+  margin-top: 10px;
+  width: 280px;
+  background-color: #f8f9fa;
 }
 
 .btn-toggle:hover {
@@ -151,7 +161,7 @@ h2 {
 .link-dark {
   text-decoration: none;
   margin-left: 20px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 /* About me page styling */
