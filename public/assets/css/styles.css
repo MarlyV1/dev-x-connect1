@@ -35,6 +35,12 @@ nav{
   width: 100%;
 }
 
+.devx-title {
+  margin-top: 6px;
+  margin-left: 6px;
+  font-weight: bold;
+}
+
 .about-us-btn,
 .search-btn {
   background-color: rgb(19, 18, 66);
@@ -141,17 +147,9 @@ h2 {
 }
 
 /* Homepage styling */
-aside {
-  display: flex;
-  flex-flow: column;
-  height: auto;
-  width: 300px;
-  background-color: #f8f9fa;
-}
-
 .sidebar {
   margin-top: 10px;
-  width: 280px;
+  width: 250px;
   background-color: #f8f9fa;
 }
 
@@ -161,7 +159,7 @@ aside {
 
 .link-dark {
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 30px;
   line-height: 2;
 }
 
