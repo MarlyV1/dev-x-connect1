@@ -38,6 +38,7 @@ body {
 
 nav{
   width: 100%;
+  box-shadow: 0 10px 10px -10px #48abe0;
 }
 
 .devx-title {
@@ -52,7 +53,7 @@ nav{
 
 .about-us-btn,
 .search-btn {
-  background-color: rgb(19, 18, 66);
+  background-color: #131242;
   border: none;
   color: white;
 }
@@ -60,7 +61,7 @@ nav{
 .about-us-btn:hover,
 .search-btn:hover {
   box-shadow: 0 0 10px 1px #48abe0;
-  background-color: rgb(19, 18, 66, .9);
+  background-color: #131242e6;
 }
 
 h1 {
@@ -157,23 +158,27 @@ h2 {
 
 /* Homepage styling */
 .sidebar {
-  margin-top: 10px;
+  margin-top: 0px;
   width: 250px;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
   background-color: #f8f9fa;
 }
 
-.btn-toggle:hover {
-  color: #39b6f0;
+.sidebar-folders {
+  color: black;
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: 1.5;
 }
 
-.link-dark {
+.sidebar-pages {
   text-decoration: none;
-  margin-left: 30px;
-  line-height: 2;
+  margin-left: 40px;
+  line-height: 1.8;
 }
 
 /* About me page styling */
-
 .card-content {
   width: 90%;
   margin: 10% auto;
