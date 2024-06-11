@@ -171,15 +171,26 @@ h2 {
 
 .sidebar-folders {
   color: black;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 10px;
   line-height: 1.5;
 }
 
 .sidebar-pages {
   text-decoration: none;
-  margin-left: 40px;
+  margin-left: 50px;
   line-height: 1.8;
+}
+
+.sidebar-main-page {
+  color: black;
+  margin-left: 24px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.icon {
+  padding-right: 4px;
 }
 
 /* About me page styling */
