@@ -12,6 +12,12 @@
     font-style: normal;
   }
 
+.nanum-gothic-coding-bold {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* index.html and nav style */
 * {
   box-sizing: border-box;
@@ -27,7 +33,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
   color: white;
 }
 
@@ -39,6 +44,10 @@ nav{
   margin-top: 6px;
   margin-left: 6px;
   font-weight: bold;
+}
+
+.devx-title-centered {
+  padding-top: 10px;
 }
 
 .about-us-btn,
