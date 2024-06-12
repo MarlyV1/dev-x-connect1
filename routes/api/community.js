@@ -11,23 +11,4 @@ router.get('/community', async (req,res) => {
 router.get('/community/:id', async (req,res) => {
     const community = await Community.findByPk(req.params.id);
     res.json(community);
-})
-
-// Join a community
-router.post('/community/:id/join', async (req,res) => {
-    const userId = req.body.userId;
-    const user = await Profile.findByPk(userId);
-
-    if(!user) {
-        return res.status(404).json({message: "User not found"})
-    }
-    await user.setGroup(req.params.id);
-    res.json({message: 'Successfully joined the community!'})
 });
-
-//Leave a community
-router.delete('/community/leave', async (req,res) => {
-    const userId = req.body.userId;
-    const user = await 
-    
-})
