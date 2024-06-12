@@ -8,11 +8,13 @@ const userLogin = async (event) => {
 
     //send a request to the API routes
     if(username && password){
-        const response = await fetch('/api/profile/login', {
-            method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: { 'Content-Type': 'application/json'},
-        });
+        try {
+            const response = await fetch('/api/profile/login', {
+                method: 'POST',
+                body: JSON.stringify({ username, password }),
+                headers: { 'Content-Type': 'application/json'},
+            });
+        
     //take the response and apply it to the homepage
         if(response.ok) {
             document.location.replace('homepage.html')
@@ -22,5 +24,8 @@ const userLogin = async (event) => {
         } else {
             alert(response.statusText);
         }
+    } catch (error) {
+        console.error(error);
     }
+}
 };
