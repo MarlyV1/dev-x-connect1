@@ -229,14 +229,27 @@ h2 {
   .sidebar {
     display: none;
   }
+
   .sidebar-shrunk {
     display: block;
     margin-left: -40px;
     margin-top: -20px;
   }
+  
+  .offcanvas-title {
+    font-size: large;
+  }
 
+  .offcanvas-header {
+    margin-bottom: 0;
+  }
+  
   .nav-link {
     margin-left: 15px;
+  }
+
+  .nav-link-top {
+    margin-top: -15px;
   }
 
   .search {
