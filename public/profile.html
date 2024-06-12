@@ -20,50 +20,60 @@
 <body>
     <header> 
         <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
-            <div class="container-fluid">
+          <div class="container-fluid">
             <div class="d-flex justify-content-center">
-                <a class="navbar-brand me-auto" href="homepage.html">
+              <a class="navbar-brand me-auto" href="homepage.html">
                 <img src="./assets/images/logo.png" alt="devXConnect logo">
-                </a>
-                <a class="navbar-brand devx-title" href="homepage.html">
+              </a>
+              <a class="navbar-brand devx-title" href="homepage.html">
                 <p class="nanum-gothic-coding-bold">devXConnect()</p>
-                </a>
+              </a>
             </div>
             <div class="d-flex justify-content-end">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="create-post.html">+Post</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">My Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Sign Out</a>
-                    </li>
-                <ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search for user..." aria-label="Search">
-                    <button class="btn search-btn nanum-gothic-coding-regular" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-        </div>
-    </nav>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link nav-link-top" href="create-post.html">+Post</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="profile.html">My Profile</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html">Sign Out</a>
+                      </li>
+                  </ul>
+                  <form class="d-flex search" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search for user..." aria-label="Search">
+                      <button class="btn search-btn nanum-gothic-coding-regular" type="submit">search()</button>
+                  </form>
+                </div>
+                </div>
+              </div>
+          </div>
+        </nav>
     </header>
     <main>
-        <div>
-            <h2>Username's Profile</h2>
-            <h3>Joined devXConnect() on this date</h3>
-        </div>
-        <div>
-            <h4>Enrolled in This Bootcamp at This Location</h4>
-            <h4>Finish Date:</h4>
-            <h4>Number of Posts: #</h4>
+        <div class="card profile-card animate__animated animate__slideInUp">
+            <div class="card-body profile-card-body">
+              <h5 class="card-title profile-card-title nanum-gothic-coding-regular">Username's Profile</h5>
+              <h6 class="card-subtitle profile-card-subtitle text-body-secondary">Joined devXConnect() on this date</h6>
+              <div class="card-text profile-card-text">
+                <h4 class="profile-data">Enrolled in This Bootcamp at This Location</h4>
+                <h4 class="profile-data">Finish Date:</h4>
+                <h4 class="profile-data">Number of Posts: #</h4>
+              </div>
+            </div>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

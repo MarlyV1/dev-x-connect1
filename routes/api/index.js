@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
 //imports routes from their file
 const profileRoutes = require('./profile');
@@ -9,5 +9,6 @@ const communityRoutes = require('./community');
 router.use('/profiles', profileRoutes);
 router.use('/posts', postRoutes);
 router.use('/community', communityRoutes);
+
 
 module.exports = router;

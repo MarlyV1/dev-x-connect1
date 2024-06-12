@@ -7,10 +7,10 @@
 
 /* Font for logo, titles, and buttons */
 .nanum-gothic-coding-regular {
-    font-family: "Nanum Gothic Coding", monospace;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .nanum-gothic-coding-bold {
   font-family: "Nanum Gothic Coding", monospace;
@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   align-items: left;
   font-size: 16px;
-  font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-image: url(../images/bg-1.jpg);
   background-position: center;
   background-size: cover;
@@ -36,31 +36,36 @@ body {
   color: white;
 }
 
-nav{
+nav {
   width: 100%;
+  box-shadow: 0 10px 10px -10px #48abe0;
 }
 
 .devx-title {
   margin-top: 6px;
   margin-left: 6px;
   font-weight: bold;
+  color: #575757;
 }
 
 .devx-title-centered {
   padding-top: 10px;
+  color: #575757;
 }
 
 .about-us-btn,
-.search-btn {
-  background-color: rgb(19, 18, 66);
+.search-btn,
+.home-btn {
+  background-color: #131242;
   border: none;
   color: white;
 }
 
 .about-us-btn:hover,
-.search-btn:hover {
+.search-btn:hover,
+.home-btn:hover {
   box-shadow: 0 0 10px 1px #48abe0;
-  background-color: rgb(19, 18, 66, .9);
+  background-color: #131242e6;
 }
 
 h1 {
@@ -87,12 +92,13 @@ h2 {
 .sign-up-card,
 .sign-in-card {
   height: 260px;
-  background-color: rgb(19, 18, 66, .9);
+  background-color: rgb(19, 18, 66, 0.9);
   color: white;
   box-shadow: 0 0 50px 10px #48abe0;
 }
 
-.sign-in-btn {
+.sign-in-btn,
+.start-now-btn {
   background-color: #39b6f0;
   color: white;
   border: none;
@@ -103,15 +109,17 @@ h2 {
   border: none;
 }
 
-.sign-in-btn:hover {
-  background-color: rgb(75, 118, 138, .7);
+.sign-in-btn:hover,
+.start-now-btn:hover {
+  background-color: rgb(75, 118, 138, 0.7);
   box-shadow: 0 0 30px 5px #48abe0;
 }
 
-.sign-up-btn:hover{
-  background-color: rgb(83, 138, 83, .7);
+.sign-up-btn:hover {
+  background-color: rgb(83, 138, 83, 0.7);
   box-shadow: 0 0 30px 5px #48abe0;
 }
+
 .card-title {
   font-size: 26px;
   padding-bottom: 20px;
@@ -132,18 +140,18 @@ h2 {
   margin-left: 50px;
 }
 
-.sign-up-page-card{
-  height: 425px;
+.sign-up-page-card {
+  height: 100%;
 }
 
 .other-page-message {
- padding-top: 25px;
- font-size: 14px;
+  padding-top: 25px;
+  font-size: 14px;
 }
 
 .other-page-link {
- text-decoration: none;
- color: #39b6f0;
+  text-decoration: none;
+  color: #39b6f0;
 }
 
 .other-page-link:hover {
@@ -157,26 +165,53 @@ h2 {
 
 /* Homepage styling */
 .sidebar {
-  margin-top: 10px;
+  margin-top: 67px;
   width: 250px;
+  height: 100vh;
+  z-index: 99;
   background-color: #f8f9fa;
+  position: fixed;
 }
 
-.btn-toggle:hover {
-  color: #39b6f0;
+.sidebar-shrunk {
+  display: none;
 }
 
-.link-dark {
+.sidebar-folders {
+  color: #575757;
+  margin-left: 10px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.sidebar-pages {
+  color: #575757;
   text-decoration: none;
-  margin-left: 30px;
-  line-height: 2;
+  margin-left: 50px;
+  line-height: 1.8;
+}
+
+.sidebar-main-page {
+  color: #575757;
+  margin-left: 24px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.sidebar-main-page:hover,
+.sidebar-pages:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.icon {
+  padding-right: 4px;
 }
 
 /* About me page styling */
-
 .card-content {
   width: 90%;
-  margin: 10% auto;
+  margin: 50px 50px 0 70px;
   padding: 30px;
   height: 75%;
   background-color: rgba(19, 18, 66, 0.959);
@@ -184,3 +219,35 @@ h2 {
   box-shadow: 0 0 50px 10px #48abe0;
 }
 
+.about-us-body {
+  margin-left: 20px;
+}
+
+/* media queries */
+/* sidebar */
+@media screen and (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar-shrunk {
+    display: block;
+    margin-top: -20px;
+  }
+  
+  .offcanvas-title {
+    font-size: large;
+  }
+
+  .offcanvas-header {
+    margin-bottom: 0;
+  }
+  
+  .nav-link {
+    margin-left: 15px;
+  }
+
+  .nav-link-top {
+    margin-top: -15px;
+  }
+}
