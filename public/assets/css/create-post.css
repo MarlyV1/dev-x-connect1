@@ -6,7 +6,6 @@ body {
 .create-post {
     width: 70%;
     margin: 50px auto;
-    /* margin-left: 350px; */
     border: thin solid rgba(192, 192, 192, 0.685);
     min-height: 200px;
     border-radius: 5px;
