@@ -24,8 +24,3 @@ const userLogin = async (event) => {
         }
     }
 };
-
-//fetch API for sign in
-const userSignUp = async (event) => {
-    event.preventDefault();
-}
