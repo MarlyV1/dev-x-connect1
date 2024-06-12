@@ -225,6 +225,7 @@ h2 {
 
 
 /* media queries */
+/* sidebar */
 @media screen and (max-width: 991px) {
   .sidebar {
     display: none;
@@ -232,7 +233,6 @@ h2 {
 
   .sidebar-shrunk {
     display: block;
-    margin-left: -40px;
     margin-top: -20px;
   }
   
@@ -250,9 +250,5 @@ h2 {
 
   .nav-link-top {
     margin-top: -15px;
-  }
-
-  .search {
-    margin-left: -40px;
   }
 }
