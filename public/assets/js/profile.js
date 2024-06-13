@@ -6,6 +6,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   const password = document.querySelector("#password").value;
   const phases = document.querySelectorAll(".form-check-input");
   let phaseChoice;
+  //iterates through elements,adding a click event listener to each that updates the phaseChoice variable to the value of the clicked and checked element.
   phases.forEach((phase) => {
     phase.addEventListener("click", function () {
       if (this.checked) {
@@ -13,6 +14,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
       }
     });
   });
+  //This code sends a POST request to create a new user, redirects to the profile page on success, or shows an alert with the error status on failure.
   if (first_name && last_name && username && password) {
     const response = await fetch("/api/users", {
       method: "POST",
