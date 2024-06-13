@@ -33,6 +33,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
   color: white;
 }
 
@@ -208,6 +209,15 @@ h2 {
   padding-right: 4px;
 }
 
+.homepage-main {
+  margin: 100px 100px 100px 350px;
+}
+
+/* Profile page styling */
+.profile-main {
+  margin: 100px;
+}
+
 /* About me page styling */
 .card-content {
   width: 90%;
@@ -249,5 +259,9 @@ h2 {
 
   .nav-link-top {
     margin-top: -15px;
+  }
+
+  .homepage-main {
+    margin: 80px;
   }
 }
