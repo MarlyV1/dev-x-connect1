@@ -11,15 +11,15 @@ document.querySelector("form").addEventListener("submit", async (event) => {
 
   // detecting which box was checked
   let phaseChoice;
+  //iterates through elements,adding a click event listener to each that updates the phaseChoice variable to the value of the clicked and checked element.
   phases.forEach((phase) => {
     phase.addEventListener("click", function () {
       if (this.checked) {
         phaseChoice = this.value;
       }
     });
-  }); 
-
-   //Once fields are filled out, send a request to API routes
+  });
+  //This code sends a POST request to create a new user, redirects to the profile page on success, or shows an alert with the error status on failure.
   if (first_name && last_name && username && password) {
     const response = await fetch("/api/profiles/signup", {
       method: "POST",
