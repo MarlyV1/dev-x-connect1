@@ -37,6 +37,14 @@ Profile.init(
              len: [8],
             },
         },
+        community_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Community',
+                key: 'id',
+                unique: false,
+            },
+        },
     },
     {
         //add hooks and encryption for password 

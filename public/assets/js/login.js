@@ -8,13 +8,16 @@ const userLogin = async (event) => {
 
     //send a request to the API routes
     if(username && password){
-        const response = await fetch('/api/profile/login', {
-            method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: { 'Content-Type': 'application/json'},
-        });
-    //take the response and apply it to the homepage
+        try {
+            const response = await fetch('/api/profiles/login', {
+                method: 'POST',
+                body: JSON.stringify({ username, password }),
+                headers: { 'Content-Type': 'application/json'},
+            });
+        
+    //take the response, get data from local storage, and apply it to the homepage
         if(response.ok) {
+            localStorage.setItem('userData', JSON.stringify(data));
             document.location.replace('homepage.html')
             const data = await response.json();
             const dataContainer = document.querySelector('.container');
@@ -22,10 +25,16 @@ const userLogin = async (event) => {
         } else {
             alert(response.statusText);
         }
+    } catch (error) {
+        console.error(error);
     }
+}
 };
 
-//fetch API for sign in
-const userSignUp = async (event) => {
-    event.preventDefault();
-}
+
+// post profile to page
+// const renderProfile = (profile) => {
+//     fetch('/api/profiles/', {
+//         method: GET
+//     })
+// }
