@@ -15,8 +15,9 @@ const userLogin = async (event) => {
                 headers: { 'Content-Type': 'application/json'},
             });
         
-    //take the response and apply it to the homepage
+    //take the response, get data from local storage, and apply it to the homepage
         if(response.ok) {
+            localStorage.setItem('userData', JSON.stringify(data));
             document.location.replace('homepage.html')
             const data = await response.json();
             const dataContainer = document.querySelector('.container');
@@ -29,3 +30,11 @@ const userLogin = async (event) => {
     }
 }
 };
+
+
+// post profile to page
+// const renderProfile = (profile) => {
+//     fetch('/api/profiles/', {
+//         method: GET
+//     })
+// }

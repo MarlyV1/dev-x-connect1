@@ -1,6 +1,6 @@
 //fetch API for sign up
-document.querySelector("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
+document.querySelector("form").addEventListener("submit", async (event) => {
+  event.preventDefault();
 
   // get input from input fields
   const first_name = document.querySelector("#firstName").value;
