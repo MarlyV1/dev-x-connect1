@@ -7,6 +7,6 @@ const renderProfile = async (profile) => {
         }); 
 
         if(response.ok){
-            localStorage.getItem
+            
         }
 }
