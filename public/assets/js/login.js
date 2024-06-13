@@ -9,7 +9,7 @@ const userLogin = async (event) => {
     //send a request to the API routes
     if(username && password){
         try {
-            const response = await fetch('/api/profile/login', {
+            const response = await fetch('/api/profiles/login', {
                 method: 'POST',
                 body: JSON.stringify({ username, password }),
                 headers: { 'Content-Type': 'application/json'},

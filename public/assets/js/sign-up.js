@@ -21,7 +21,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
    //Once fields are filled out, send a request to API routes
   if (first_name && last_name && username && password) {
-    const response = await fetch("/api/users", {
+    const response = await fetch("/api/profiles/signup", {
       method: "POST",
       body: JSON.stringify({
         first_name,
@@ -35,7 +35,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     
     // response
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace("/homepage.html");
       console.log(submitted);
     } else {
       alert(response.statusText);
