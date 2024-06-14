@@ -8,6 +8,12 @@ const userLogin = async (event) => {
     const username = document.querySelector('#userName').value.trim();
     const password = document.querySelector('#password').value.trim();
 
+     // if fields are left empty, display error
+     if (!username || !password) {
+        const errorMessage = document.querySelector('.error');
+        errorMessage.textContent = 'All fields are required';
+        return;
+}
     //send a request to the API routes
     if(username && password){
          fetch('/api/profiles/login', {
