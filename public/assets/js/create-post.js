@@ -35,8 +35,20 @@ const quill = new Quill('#editor', {
   theme: 'snow'
 });
 
+//GET request method for the posts
+const getPost = async () => {
+  const response = await fetch('/api/posts', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  const data = await response.json();
+  dataStringify = JSON.stringify(data)
+  return dataStringify;
+}
 
-//POST request method 
+//POST request method for the posts 
 const makePost = (newPost) => {
   fetch('/api/posts', {
     method: 'POST',
@@ -56,7 +68,8 @@ const getPolls = async () => {
     }
   })
   const data = await response.json();
-  return data;
+  dataStringify = JSON.stringify(data)
+  return dataStringify;
 };
 
 //POST request method for the poll
@@ -154,6 +167,7 @@ const radioValue = () => {
 //Event listener for the post submit button
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  radioValue();
   handleNewPost();
 });
 
@@ -166,5 +180,6 @@ dropdown.addEventListener('change', (e) => {
 //Event listener for the poll submit button
 pollBtn.addEventListener('click', (e) => {
   e.preventDefault;
+  radioValue();
   handleNewPoll();
 });
