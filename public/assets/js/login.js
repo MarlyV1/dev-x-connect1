@@ -32,9 +32,3 @@ const userLogin = async (event) => {
 };
 
 
-// post profile to page
-// const renderProfile = (profile) => {
-//     fetch('/api/profiles/', {
-//         method: GET
-//     })
-// }
