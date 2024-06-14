@@ -14,7 +14,7 @@ router.post("/signup", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+ 
 //route to login existing user
 router.post("/login", async (req, res) => {
   const profileData = await Profile.findOne({
