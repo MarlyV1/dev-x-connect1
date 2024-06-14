@@ -8,27 +8,34 @@ const userLogin = async (event) => {
 
     //send a request to the API routes
     if(username && password){
-        try {
-            const response = await fetch('/api/profiles/login', {
+         fetch('/api/profiles/login', {
                 method: 'POST',
                 body: JSON.stringify({ username, password }),
                 headers: { 'Content-Type': 'application/json'},
-            });
+            })
+
+            .then(response => {
+                if(response.ok){
+                    return response.json();
+                } else {
+                    console.log('Error during login');
+                }
+            })
+            .then(data => {
+                renderData(data);
+            })
+            .catch(error => console.error('Error:', error));
+    }};
         
-    //take the response, get data from local storage, and apply it to the homepage
-        if(response.ok) {
-            localStorage.setItem('userData', JSON.stringify(data));
-            document.location.replace('homepage.html')
-            const data = await response.json();
-            const dataContainer = document.querySelector('.container');
-            dataContainer.textContent = JSON.stringify(data, null, 2);
-        } else {
-            alert(response.statusText);
-        }
-    } catch (error) {
-        console.error(error);
-    }
+  
+//separate function to render data
+function renderData() {
+    const container = document.querySelector('.container');
+    const username = document.createElement('h1');
+    username.textContent = data.username;
+    const phaseGroup = document.createElement('h3');
+    phaseGroup.textContent = data.phaseGroup;
+
+    container.append(username);
+    container.append(phaseGroup);
 }
-};
-
-
