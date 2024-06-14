@@ -36,7 +36,7 @@ const quill = new Quill('#editor', {
 });
 
 //GET request method for the posts
-const getPost = async () => {
+const getPosts = async () => {
   const response = await fetch('/api/posts', {
     method: 'GET',
     headers: {
@@ -103,6 +103,13 @@ const handleNewPoll = async () => {
     poll_option_four: optFourInput.value,
   }
   const data = await createPoll(newPoll);
+  return data;
+};
+
+//Displays the posts
+const displayPosts = async() => {
+  const data = await getPost();
+  console.log(data);
   return data;
 };
 

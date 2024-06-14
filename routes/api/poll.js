@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, Profile, Community, Poll } = require('../../models');
 
+//GET request
 router.get('/', async (req, res) => {
     try {
         const newPoll = await Poll.findAll({
@@ -14,6 +15,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+//POST request
 router.post('/', async (req, res) => {
     try {
         const newPoll = await Poll.create(req.body);
