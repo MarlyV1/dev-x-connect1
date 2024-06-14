@@ -8,6 +8,13 @@ const pollChoiceThree = document.querySelector('.poll-choice-three');
 const pollChoiceFour = document.querySelector('.poll-choice-four');
 
 
+const pollTitle = document.querySelector('.poll-title-input');
+const optOneInput = document.querySelector('.opt-one-text');
+const optTwoInput = document.querySelector('.opt-two-text');
+const optTheeInput = document.querySelector('.opt-three-text');
+const optFourInput = document.querySelector('.opt-four-text');
+
+
 //Formatting for the Quill text editor
 const toolbarOptions = [
   [{ 'header': [1, 2, false] }],
@@ -42,6 +49,29 @@ const makePost = (newPost) => {
     body: JSON.stringify(newPost)
   });
 };
+
+//GET request method for the poll
+const getPolls = async () => {
+  const response = await fetch('/api/polls', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  const data = await response.json();
+  return data;
+}
+
+//POST request method for the poll
+const createPoll = (poll) => {
+  fetch('/api/polls', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(poll)
+  });
+}
 
 //Takes user's input to create the new post
 const handleNewPost = async () => {
