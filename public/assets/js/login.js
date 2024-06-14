@@ -1,7 +1,9 @@
+const loginButton = document.querySelector('.sign-in-btn')
+
 // fetch API for login
 const userLogin = async (event) => {
     event.preventDefault();
-    
+
     //getting input from login form
     const username = document.querySelector('#userName').value.trim();
     const password = document.querySelector('#password').value.trim();
@@ -16,26 +18,20 @@ const userLogin = async (event) => {
 
             .then(response => {
                 if(response.ok){
+                    console.log('Status:', response.status)
                     return response.json();
                 } else {
                     console.log('Error during login');
                 }
             })
             .then(data => {
-                renderData(data);
-            })
-            .catch(error => console.error('Error:', error));
+                console.log("Data:", data)
+                window.localStorage.setItem('data', JSON.stringify(data))
+                document.location.replace('/homepage.html')
+            });
     }};
         
   
-//separate function to render data
-function renderData(data) {
-    const container = document.querySelector('.container');
-    const username = data.username.createElement('h1');
-    username.textContent = data.username;
-    const phaseGroup = data.community.createElement('h3');
-    phaseGroup.textContent = data.phaseGroup;
 
-    container.append(username);
-    container.append(phaseGroup);
-}
+
+loginButton.addEventListener('click', userLogin);
