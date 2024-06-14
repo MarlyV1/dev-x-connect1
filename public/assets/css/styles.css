@@ -54,6 +54,10 @@ body {
   color: white;
 }
 
+.homepage-body {
+  background-image: linear-gradient(to bottom right, #090e6a, #2c91df);
+}
+
 .index-body {
   overflow: hidden;
 }
