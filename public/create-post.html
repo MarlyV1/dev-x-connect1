@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
   <!-- animations library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.snow.css" rel="stylesheet" />
@@ -23,8 +23,8 @@
 </head>
 
 <body>
-  <header> 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <div class="d-flex justify-content-center">
           <a class="navbar-brand me-auto" href="homepage.html">
@@ -35,70 +35,208 @@
           </a>
         </div>
         <div class="d-flex justify-content-end">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link nav-link-top" href="create-post.html">+Post</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="profile.html">My Profile</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">Sign Out</a>
-                  </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-top" href="create-post.html">+Post</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">My Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Sign Out</a>
+                </li>
               </ul>
               <form class="d-flex search" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search for user..." aria-label="Search">
-                  <button class="btn search-btn nanum-gothic-coding-regular" type="submit">search()</button>
+                <input class="form-control me-2" type="search" placeholder="Search for user..." aria-label="Search">
+                <button class="btn search-btn nanum-gothic-coding-regular" type="submit">search()</button>
               </form>
             </div>
-            </div>
           </div>
+        </div>
       </div>
     </nav>
-    </header>
+  </header>
 
   <div class="animate__animated animate__slideInUp">
-  <section class="create-post bg-body-tertiary">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item post-nav-item" role="presentation">
-        <button class="nav-link active" id="pills-post-tab" data-bs-toggle="pill" data-bs-target="#pills-post"
-          type="button" role="tab" aria-controls="pills-post" aria-selected="true">New Post</button>
-      </li>
-      <li class="nav-item post-nav-item" role="presentation">
-        <button class="nav-link" id="pills-poll-tab" data-bs-toggle="pill" data-bs-target="#pills-poll" type="button"
-          role="tab" aria-controls="pills-poll" aria-selected="false">New Poll</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab"
-        tabindex="0">
+    <section class="create-post bg-body-tertiary">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item post-nav-item" role="presentation">
+          <button class="nav-link active" id="pills-post-tab" data-bs-toggle="pill" data-bs-target="#pills-post"
+            type="button" role="tab" aria-controls="pills-post" aria-selected="true">New Post</button>
+        </li>
+        <li class="nav-item post-nav-item" role="presentation">
+          <button class="nav-link" id="pills-poll-tab" data-bs-toggle="pill" data-bs-target="#pills-poll" type="button"
+            role="tab" aria-controls="pills-poll" aria-selected="false">New Poll</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab"
+          tabindex="0">
 
-        <form action="">
-          <!-- New Post Form -->
+           <!-- New Post Form -->
+          <form action="">
+            <div class="mb-3">
+              <label for="title-input" class="form-label">Title</label>
+              <input type="text" class="form-control title" id="title-input" placeholder="Title">
+            </div>
+            <div class="mb-3">
+              <label for="editor" class="form-label"></label>
+              <textarea class="form-control textarea" id="editor" rows="10"></textarea>
+            </div>
+
+            <!-- Allows users to select which community they are posting to -->
+             <div class="community-post">Which community do you want to display to:</div>
+            <div class="radio-selected">
+              
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="HTML" value="HTML">
+                <label class="form-check-label" for="inlineRadio1">HTML</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="CSS" value="CSS">
+                <label class="form-check-label" for="inlineRadio2">CSS</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="JavaScript" value="JavaScript">
+                <label class="form-check-label" for="inlineRadio3">JavaScript</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="APIs" value="APIs">
+                <label class="form-check-label" for="inlineRadio3">APIs</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Node" value="Node.js">
+                <label class="form-check-label" for="inlineRadio1">Node.js</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Express" value="Express.js">
+                <label class="form-check-label" for="inlineRadio2">Express.js</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="SQL" value="SQL">
+                <label class="form-check-label" for="inlineRadio3">SQL</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="NoSQL" value="NoSQL">
+                <label class="form-check-label" for="inlineRadio3">NoSQL</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="React" value="React">
+                <label class="form-check-label" for="inlineRadio3">React</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="MERN" value="MERN">
+                <label class="form-check-label" for="inlineRadio3">MERN</label>
+              </div>
+            </div>
+            <button class="submit-post nanum-gothic-coding-regular" type="submit">post()</button>
+          </form>
+        </div>
+
+        <div class="tab-pane fade" id="pills-poll" role="tabpanel" aria-labelledby="pills-poll-tab" tabindex="0">
+
           <div class="mb-3">
-            <label for="title-input" class="form-label">Title</label>
-            <input type="text" class="form-control title" id="title-input" placeholder="Title">
+            <label for="exampleFormControlInput1" class="form-label">Poll Title</label>
+            <input type="text" class="poll-title-input form-control" id="exampleFormControlInput1" placeholder="Title">
           </div>
-          <div class="mb-3">
-            <label for="editor" class="form-label">Text</label>
-            <textarea class="form-control textarea" id="editor" rows="10"></textarea>
+
+          <!-- Dropdown option for the poll  -->
+          <div id="options">
+            <select class="dropdown form-select">
+              <option selected>How Many Poll Options</option>
+              <option class="poll-opt-two" value="2">Two</option>
+              <option class="poll-opt-three" value="3">Three</option>
+              <option class="poll-opt-four" value="4">Four</option>
+            </select>
           </div>
-          <button class="submit-post nanum-gothic-coding-regular" type="submit">post()</button>
-        </form>
+          <div class="two-poll-choices">
+            <div class="poll-choice-one input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 1</span>
+              <input type="text" class="opt-one-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="poll-choice-two input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 2</span>
+              <input type="text" class="opt-two-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+          <div class="poll-choice-three">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 3</span>
+              <input type="text" class="opt-three-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+          <div class="poll-choice-four">
+            <div class=" input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 4</span>
+              <input type="text" class="opt-four-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+
+          <!-- Allows users to select which community the poll is going to -->
+          <div class="community-post">Which community do you want to display to:</div>
+          <div class="radio-selected">
+            <div class="form-check form-check-inline">
+              <input class="HTML form-check-input" type="radio" name="inlineRadioOptions" id="poll-HTML" value="HTML">
+              <label class="form-check-label" for="inlineRadio1">HTML</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="CSS form-check-input" type="radio" name="inlineRadioOptions" id="poll-CSS" value="CSS">
+              <label class="form-check-label" for="inlineRadio2">CSS</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="JavaScript form-check-input" type="radio" name="inlineRadioOptions" id="poll-JavaScript" value="JavaScript">
+              <label class="form-check-label" for="inlineRadio3">JavaScript</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="APIs form-check-input" type="radio" name="inlineRadioOptions" id="poll-APIs" value="APIs">
+              <label class="form-check-label" for="inlineRadio3">APIs</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="Node form-check-input" type="radio" name="inlineRadioOptions" id="poll-Node" value="Node.js">
+              <label class="form-check-label" for="inlineRadio1">Node.js</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="Express form-check-input" type="radio" name="inlineRadioOptions" id="poll-Express" value="Express.js">
+              <label class="form-check-label" for="inlineRadio2">Express.js</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="SQL form-check-input" type="radio" name="inlineRadioOptions" id="poll-SQL" value="SQL">
+              <label class="form-check-label" for="inlineRadio3">SQL</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="poll-NoSQL form-check-input" type="radio" name="inlineRadioOptions" id="poll-NoSQL" value="NoSQL">
+              <label class="form-check-label" for="inlineRadio3">NoSQL</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="poll-React form-check-input" type="radio" name="inlineRadioOptions" id="poll-React" value="React">
+              <label class="form-check-label" for="inlineRadio3">React</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="MERN form-check-input" type="radio" name="inlineRadioOptions" id="poll-MERN" value="MERN">
+              <label class="form-check-label" for="inlineRadio3">MERN</label>
+            </div>
+          </div>
+
+          <button class="submit-poll nanum-gothic-coding-regular" type="submit">post()</button>
+        </div>
       </div>
-      <div class="tab-pane fade" id="pills-poll" role="tabpanel" aria-labelledby="pills-poll-tab" tabindex="0">...</div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.js"></script>

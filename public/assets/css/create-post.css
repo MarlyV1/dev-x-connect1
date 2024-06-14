@@ -21,7 +21,7 @@ body {
 }
 
 .nav-pills .nav-link.active {
-    background-color: #48abe0;
+    background-color: #131242;
 }
 
 .nav-link {
@@ -36,7 +36,8 @@ body {
     min-height: inherit;
 }
 
-.submit-post {
+.submit-post,
+.submit-poll {
     border-radius: 5px;
     margin-top: 5px;
     padding: 10px;
@@ -47,7 +48,29 @@ body {
     font-weight: bold;
 }
 
-.submit-post:hover {
+.submit-post:hover,
+.submit-poll:hover {
     background-color: #131242e6;
     box-shadow: 0 0 10px 1px #48abe0;
+}
+
+.community-post {
+    color: rgba(0, 0, 0, 0.692);
+    margin-top: 10px;
+}
+
+.radio-selected {
+    color: rgba(0, 0, 0, 0.692);
+    margin: 20px 0px;
+}
+
+.dropdown {
+    width: 52.5%;
+    margin-bottom: 20px;   
+}
+
+.two-poll-choices,
+.poll-choice-three,
+.poll-choice-four {
+    display: none;
 }
