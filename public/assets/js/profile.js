@@ -10,19 +10,14 @@ function profileData(data) {
     const username = document.createElement('h1');
     username.textContent = data.user.username;
 
-    const firstName = document.createElement('h4');
-    firstName.textContent = data.user.first_name;
-    firstName.style.display = 'inline';
-
-    const lastName = document.createElement('h4');
-    lastName.textContent = data.user.last_name;
-    lastName.style.display = 'inline';
+    const name = document.createElement('h3');
+    name.textContent = data.user.first_name + ' ' + data.user.last_name;
 
     const createDate = document.createElement('p');
-    createDate.textContent = data.user.createdAt;
+    const date = new Date(data.user.createdAt);
+    createDate.textContent = 'Member since' + ' ' + date.toLocaleDateString();
 
     container.append(username);
-    container.append(firstName);
-    container.append(lastName);
+    container.append(name);
     container.append(createDate);
 };
