@@ -12,3 +12,5 @@ router.get('/community/:id', async (req,res) => {
     const community = await Community.findByPk(req.params.id);
     res.json(community);
 });
+
+module.exports = router;
