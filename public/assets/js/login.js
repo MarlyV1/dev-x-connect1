@@ -24,7 +24,6 @@ const userLogin = async (event) => {
 
             .then(response => {
                 if(response.ok){
-                    console.log('Status:', response.status)
                     return response.json();
                 } else {
                     console.log('Error during login');

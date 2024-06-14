@@ -253,6 +253,19 @@ h2 {
   margin: 100px 100px 100px 350px;
 }
 
+.msg {
+  margin-top: 15px;
+}
+
+.postBtn {
+  background-color: white;
+  color: #090e6a;
+  padding: 20px;
+  margin: 10px;
+  border: 2px #131242;
+  border-radius: 5px;
+}
+
 
 /* Profile page styling */
 .profile-main {
