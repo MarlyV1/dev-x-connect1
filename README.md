@@ -16,10 +16,9 @@
 
   ## Usage
   Visit <a href="https://dev-x-connect1.onrender.com/">devXConnect()</a> today to join and start interacting with coders just like you. Make an account or log in to start. You can post your own questions, resources, or projects, or you can reply to your peers. 
-  ![image](https://github.com/MarlyV1/dev-x-connect1/assets/160694396/23d23e3b-72b4-42c7-b74a-9f4401fefd93)
-![image](https://github.com/MarlyV1/dev-x-connect1/assets/160694396/23d23e3b-72b4-42c7-b74a-9f4401fefd93)
-![image](https://github.com/MarlyV1/dev-x-connect1/assets/160694396/23d23e3b-72b4-42c7-b74a-9f4401fefd93)
 
+  
+  ![image](https://github.com/MarlyV1/dev-x-connect1/assets/160694396/23d23e3b-72b4-42c7-b74a-9f4401fefd93)
 
   </br>
   Languages : HTML CSS JavaScript Node Express
