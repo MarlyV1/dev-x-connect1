@@ -142,9 +142,58 @@
             </div>
             <button class="submit-post nanum-gothic-coding-regular" type="submit">post()</button>
           </form>
-
         </div>
-        <div class="tab-pane fade" id="pills-poll" role="tabpanel" aria-labelledby="pills-poll-tab" tabindex="0">...
+
+        <div class="tab-pane fade" id="pills-poll" role="tabpanel" aria-labelledby="pills-poll-tab" tabindex="0">
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Poll Title</label>
+            <input type="text" class="poll-title-input form-control" id="exampleFormControlInput1" placeholder="Title">
+          </div>
+
+          <!-- Dropdown option for the poll  -->
+          <div id="options">
+            <select class="dropdown form-select">
+              <option selected>How Many Poll Options</option>
+              <option class="poll-opt-two" value="2">Two</option>
+              <option class="poll-opt-three" value="3">Three</option>
+              <option class="poll-opt-four" value="4">Four</option>
+            </select>
+          </div>
+  
+          <div class="two-poll-choices">
+            <div class="poll-choice-one input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 1</span>
+              <input type="text" class="opt-one-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+  
+            <div class="poll-choice-two input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 2</span>
+              <input type="text" class="opt-two-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+  
+          <div class="poll-choice-three">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 3</span>
+              <input type="text" class="opt-three-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+  
+          <div class="poll-choice-four">
+            <div class=" input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Option 4</span>
+              <input type="text" class="opt-four-text form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+            
+
+          </div>
+
         </div>
       </div>
     </section>

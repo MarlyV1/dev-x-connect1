@@ -61,3 +61,14 @@ body {
     color: rgba(0, 0, 0, 0.692);
     margin: 20px 0px;
 }
+
+.dropdown {
+    width: 52.5%;
+    margin-bottom: 20px;   
+}
+
+.two-poll-choices,
+.poll-choice-three,
+.poll-choice-four {
+    display: none;
+}
