@@ -83,6 +83,12 @@ const handleNewPost = async () => {
   return data;
 }
 
+const handleNewPoll = async () => {
+  const newPoll = {
+    
+  }
+}
+
 //Dropdown that will display the amount of poll options
 const dropdownOption = (value) => {
   if(value === 2) {
