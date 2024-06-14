@@ -14,7 +14,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
       }
     });
   });
-  //This code sends a POST request to create a new user, redirects to the profile page on success, or shows an alert with the error status on failure.
+  //sends a POST request to create a new user, redirects to the profile page on success, or shows an alert with the error status on failure.
   if (first_name && last_name && username && password) {
     const response = await fetch("/api/users", {
       method: "POST",
@@ -36,3 +36,9 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     }
   }
 });
+//capture the input and make an API call to your backend.
+async function searchUserName() {
+  const username = document.getElementById("seachInput").value;
+  const response = await fetch(`api/users/search?username=${username}`);
+  const data = await response.json();
+}
