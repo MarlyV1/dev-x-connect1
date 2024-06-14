@@ -33,7 +33,8 @@ Poll.init(
             allowNull: true,
         },
         topic: {
-            type: DataTypes.TEXT
+            type: DataTypes.TEXT,
+            allowNull: false,
         },
         date_of_post: {
             type: DataTypes.DATE,
