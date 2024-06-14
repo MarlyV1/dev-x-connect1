@@ -29,11 +29,11 @@ const userLogin = async (event) => {
         
   
 //separate function to render data
-function renderData() {
+function renderData(data) {
     const container = document.querySelector('.container');
-    const username = document.createElement('h1');
+    const username = data.username.createElement('h1');
     username.textContent = data.username;
-    const phaseGroup = document.createElement('h3');
+    const phaseGroup = data.community.createElement('h3');
     phaseGroup.textContent = data.phaseGroup;
 
     container.append(username);
