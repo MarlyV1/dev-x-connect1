@@ -51,3 +51,13 @@ body {
     background-color: #131242e6;
     box-shadow: 0 0 10px 1px #48abe0;
 }
+
+.community-post {
+    color: rgba(0, 0, 0, 0.692);
+    margin-top: 10px;
+}
+
+.radio-selected {
+    color: rgba(0, 0, 0, 0.692);
+    margin: 20px 0px;
+}
