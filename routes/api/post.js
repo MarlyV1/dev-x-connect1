@@ -12,11 +12,11 @@ router.get('/', async (req, res) => {
     res.status(400).json(error.message)
     console.log(error.message)
   }
-  
 })
 
 //Create new post
 router.post('/', async (req, res) => {
+  console.log(req.body)
   try {
     const newPost = await Post.create({...req.body, profile_id: req.session.user_id});
     res.status(200).json(newPost);

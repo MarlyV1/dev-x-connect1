@@ -29,6 +29,8 @@ const makePost = (newPost) => {
   });
 };
 
+
+
 //GET request method for the poll
 const getPolls = async () => {
   const response = await fetch('/api/polls', {
@@ -68,10 +70,11 @@ const handleNewPost = async () => {
 const handleNewPoll = async () => {
   const newPoll = {
     poll_title: pollTitle.value,
-    poll_option_one: optTwoInput.value,
+    poll_option_one: optOneInput.value,
     poll_option_two: optTwoInput.value,
     poll_option_three: optThreeInput.value,
     poll_option_four: optFourInput.value,
+    topic: radioSelected
   }
   const data = await createPoll(newPoll);
   return data;

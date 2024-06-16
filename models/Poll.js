@@ -37,10 +37,8 @@ Poll.init(
             allowNull: false,
         },
         date_of_post: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW,
-            get() {const rawValue = this.getDataValue('data_of_post')
-                return rawValue ? dayJS(rawValue).format('MM/DD/YYYY') : null
+            type: DataTypes.DATE, defaultValue: DataTypes.NOW, get(){const rawValue = this.getDataValue('date_of_post')
+                return rawValue ? dayJS(rawValue).format('MM/DD/YYYY') : null 
             }
         },
         profile_id: {
