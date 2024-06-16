@@ -29,7 +29,17 @@ const makePost = (newPost) => {
   });
 };
 
-
+//Delete request method for a post
+const deletePost = async (id) => {
+  const response = await fetch(`/api/posts/${id}`, { 
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  const data = await response.json();
+  return data;
+}
 
 //GET request method for the poll
 const getPolls = async () => {
@@ -54,6 +64,18 @@ const createPoll = (poll) => {
     body: JSON.stringify(poll)
   });
 };
+
+//Delete request method for a poll
+const deletePoll = async (id) => {
+  const response = await fetch(`/api/polls/${id}`, { 
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  const data = await response.json();
+  return data;
+}
 
 //Takes user's input to create the new post
 const handleNewPost = async () => {
