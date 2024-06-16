@@ -289,6 +289,36 @@ h2 {
 }
 
 
+/* Displayed posts styling */
+.display-post {
+  height: 260px;
+  width: 100%;
+  background-color: rgba(19, 18, 66, 0.572);
+  color: white;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.card-header {
+  display: flex;
+  border-color: white;
+  font-size: x-small;
+  justify-content: space-between;
+}
+
+.display-post p {
+  font-size: medium;
+}
+
+.display-post .date {
+  font-size: smaller;
+}
+
+.date {
+  text-align: right;
+  font-size: smaller;
+}
+
 /* media queries */
 /* sidebar */
 @media screen and (max-width: 991px) {
