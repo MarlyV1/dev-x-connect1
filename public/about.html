@@ -20,7 +20,7 @@
   <title>About Us</title>
 </head>
 
-<body>
+<body class="about-us-body">
   <nav class="navbar bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -33,48 +33,61 @@
     </div>
     </div>
   </nav>
+
   <main>
-    <div class="card card-content  animate__animated animate__slideInUp">
+    <div class="card card-content about-me-card animate__animated animate__slideInUp">
       <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-3 about-logo">
           <img src="./assets/images/logo-big.png" class="img-fluid rounded-start" alt="logo">
         </div>
-        <div class="col-md-8 ">
-          <div class="card-body about-us-body">
+        <div class="col-md-9">
+          <div class="card-body about-us-card-body">
             <h5 class="card-title">About Us</h5>
             <p class="card-text">We are a group of coding students who took a coding bootcamp and relied on the help of
               research and each other to get through the weeks. Now we want to do the same for you.</p>
             <p class="card-text" style="font-style: italic;"> Made for coders by coders.</p>
-            <a href="index.html" class="btn start-now-btn">Start Now!</a>
+            <a href="index.html" class="btn start-now-btn">startNow()</a>
+        </div>
+      </div>
+          <div class="card-body about-us-card-body">
+            <h5 class="about-subtitle">Meet the Devs</h5>
+            <!-- carousel -->
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-
-                  <img src="./assets/images/icons/saydee.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Saydeez Reyes</h5>
+                  <img src="./assets/images/icons/saydee.png" class="d-block w-100" alt="Saydeez Reyes github">
+                    <div class="about-caption">
+                      <h5>Saydeez Reyes</h5>
+                      <a href="https://github.com/saydeezr">See More</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/icons/bethany.png" class="d-block w-100" alt="Bethany Proctor github">
+                  <div class="about-caption">
+                    <h5>Bethany Proctor</h5>
+                    <a href="https://github.com/saydeezr">See More</a>
+                  </div> 
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/icons/marly.png" class="d-block w-100" alt="Marly Valcin github">
+                  <div class="about-caption">
+                    <h5>Marly Valcin</h5>
+                    <a href="https://github.com/saydeezr">See More</a>
+                  </div> 
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/icons/matt.png" class="d-block w-100" alt="Matt Carpenter github">
+                  <div class="about-caption">
+                    <h5>Matt Carpenter</h5>
                     <a href="https://github.com/saydeezr">See More</a>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./assets/images/icons/bethany.png" class="d-block w-100" alt="...">
-                  <h5>Bethany Proctor</h5>
+                  <img src="./assets/images/icons/roger.png" class="d-block w-100" alt="Roger Aponte github">
+                  <div class="about-caption">
+                    <h5>Roger Aponte</h5>
                     <a href="https://github.com/saydeezr">See More</a>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/images/icons/marly.png" class="d-block w-100" alt="...">
-                  <h5>Marly Valcin</h5>
-                    <a href="https://github.com/saydeezr">See More</a>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/images/icons/matt.png" class="d-block w-100" alt="...">
-                  <h5>Matt Carpenter</h5>
-                    <a href="https://github.com/saydeezr">See More</a>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/images/icons/roger.png" class="d-block w-100" alt="...">
-                  <h5>Roger Aponte</h5>
-                    <a href="https://github.com/saydeezr">See More</a>
+                  </div> 
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -88,7 +101,6 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-          </div>
         </div>
       </div>
     </div>
