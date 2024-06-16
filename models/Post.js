@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const dayJS = require('dayjs');
 
 //creating instance of Post from Model class
 class Post extends Model {}
@@ -21,8 +22,14 @@ Post.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        topic: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
         date_of_post: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATE, defaultValue: DataTypes.NOW, get(){const rawValue = this.getDataValue('date_of_post')
+                return rawValue ? dayJS(rawValue).format('MM/DD/YYYY') : null 
+            }
         },
         profile_id: {
             type: DataTypes.INTEGER,

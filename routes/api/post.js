@@ -16,9 +16,9 @@ router.get('/', async (req, res) => {
 })
 
 //Create new post
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const newPost = await Post.create(req.body);
+    const newPost = await Post.create({...req.body, profile_id: req.session.user_id});
     res.status(200).json(newPost);
     console.log("Successfully added to the database");
   } catch (error) {

@@ -1,4 +1,4 @@
-const { postToHomepage, specificCommunities } = require('./display-post');
+// const { postToHomepage, specificCommunities } = require('./display-post');
 let title = document.querySelector('.title');
 let textarea = document.querySelector('.textarea');
 let radioSelected = '';
@@ -22,7 +22,7 @@ const pollBtn = document.querySelector('.submit-poll');
 const makePost = (newPost) => {
   fetch('/api/posts', {
     method: 'POST',
-    header: {
+    headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(newPost)
@@ -56,8 +56,9 @@ const createPoll = (poll) => {
 //Takes user's input to create the new post
 const handleNewPost = async () => {
   const newPost = {
-    post_name: title,
-    message: textarea
+    title: title.value,
+    message: textarea.value,
+    topic: radioSelected
   };
   const data = await makePost(newPost);
   return data;
@@ -146,7 +147,7 @@ submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   radioValue();
   handleNewPost();
-  postToHomepage();
+  // postToHomepage();
 });
 
 //Event listener for the poll dropdown button
