@@ -77,7 +77,7 @@ const deletePoll = async (id) => {
   return data;
 }
 
-//Takes user's input to create the new post
+//Takes user's input to create a new post
 const handleNewPost = async () => {
   const newPost = {
     title: title.value,
@@ -173,6 +173,7 @@ submitBtn.addEventListener('click', (e) => {
   radioValue();
   handleNewPost();
   // postToHomepage();
+  document.location.href = 'homepage.html';
 });
 
 //Event listener for the poll dropdown button
@@ -186,4 +187,5 @@ pollBtn.addEventListener('click', (e) => {
   e.preventDefault;
   radioValue();
   handleNewPoll();
+  document.location.href = 'homepage.html';
 });
