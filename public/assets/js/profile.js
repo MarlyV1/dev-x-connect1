@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function profileData(data) {
-    const container = document.querySelector('.card-body');
+    const container = document.querySelector('.profile-card-body');
 
     const username = document.createElement('h1');
     username.textContent = data.user.username;
