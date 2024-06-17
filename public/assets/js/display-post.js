@@ -10,6 +10,8 @@ const sqlPage = document.getElementById('sql');
 const nosqlPage = document.getElementById('nosql');
 const reactPage = document.getElementById('react');
 const mernPage = document.getElementById('mern');
+const networkingPage = document.getElementById('networking');
+const resourcesPage = document.getElementById('resources');
 
 
 //GET request method for the posts
@@ -75,6 +77,8 @@ window.onload = function() {
     nosqlPage.onclick = async function() {communityData('NoSQL')};
     reactPage.onclick = async function() {communityData('React')};
     mernPage.onclick = async function() {communityData('MERN')};
+    networkingPage.onclick = async function() {communityData('Networking')};
+    resourcesPage.onclick = async function() {communityData('Resources')};
 }
 
 async function communityData(community) {

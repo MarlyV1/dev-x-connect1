@@ -180,6 +180,10 @@ h2 {
   padding-bottom: 5px;
 }
 
+.error {
+  padding-bottom: 6px;
+  color: red;
+}
 
 /* Homepage styling */
 .sidebar {
