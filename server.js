@@ -42,7 +42,7 @@ app.use(routes);
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
 })
-sequelize.sync({force: false})
+sequelize.sync({force: true})
  .then (() => {app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })});
