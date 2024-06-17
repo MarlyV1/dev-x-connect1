@@ -37,7 +37,7 @@ const reorderedData = async () => {
 //The markdown layout for the displayed posts
 const postMarkdown = (data) => {
     const username ='';
-    if(!data.Profile.username){
+    if(data.Profile === null){
         username = 'BTCMP1212'
     } else {
         username = data.Profile.username
