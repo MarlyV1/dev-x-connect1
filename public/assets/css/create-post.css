@@ -5,7 +5,7 @@ body {
 
 .create-post {
     width: 70%;
-    margin: 50px auto;
+    margin: 120px auto 40px auto;
     border: thin solid rgba(192, 192, 192, 0.685);
     min-height: 200px;
     border-radius: 5px;
@@ -13,6 +13,9 @@ body {
     box-shadow: 0 0 20px rgba(12, 75, 234, 0.592);
 }
 
+.post-label {
+    color: black;
+}
 
 .post-nav-item {
    display: flex;
