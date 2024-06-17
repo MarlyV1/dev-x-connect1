@@ -19,11 +19,11 @@ Profile.init(
         },
         first_name: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
         last_name: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
         username: {
             type: DataTypes.STRING,
