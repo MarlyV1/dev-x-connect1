@@ -36,10 +36,16 @@ const reorderedData = async () => {
 
 //The markdown layout for the displayed posts
 const postMarkdown = (data) => {
+    const username ='';
+    if(!data.Profile.username){
+        username = 'BTCMP1212'
+    } else {
+        username = data.Profile.username
+    }
     const markdown = `
     <div class="display-post card border-light mb-3">
         <div class="card-header">
-            <div>${data.Profile.username}</div>
+            <div>${username}</div>
             <div>${data.date_of_post}</div>
             <div>${data.topic}</div>
         </div>
@@ -55,7 +61,6 @@ const postMarkdown = (data) => {
 //Displays all posts to the homepage
 const postToHomepage = async () => {
     const data = await reorderedData();
-    console.log(data)
     let homepage = '';
     await data.forEach((e) => {
         homepage += postMarkdown(e);
