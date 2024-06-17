@@ -161,6 +161,12 @@ const radioValue = () => {
    }else if(document.getElementById('MERN').checked || document.getElementById('poll-MERN').checked) {
      console.log('MERN')
      radioSelected = 'MERN';
+   }else if(document.getElementById('Resources').checked || document.getElementById('poll-Resources').checked) {
+    console.log('Resources')
+    radioSelected = 'Resources';
+   }else if(document.getElementById('Networking').checked || document.getElementById('poll-Networking').checked) {
+    console.log('Networking')
+    radioSelected = 'Networking';
    }
    return radioSelected;
  };
