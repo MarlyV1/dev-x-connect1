@@ -131,36 +131,42 @@ const dropdownOption = (value) => {
 
 //Get the value of the selected community radio button
 const radioValue = () => {
-  if(document.getElementById('HTML').checked || document.getElementById('poll-HTML').checked) {
+  if(document.getElementById('HTML').checked) {
      console.log('html')
      radioSelected = 'HTML';
-   }else if(document.getElementById('CSS').checked || document.getElementById('poll-CSS').checked) {
+   }else if(document.getElementById('CSS').checked) {
      console.log('CSS')
      radioSelected = 'CSS';
-   }else if(document.getElementById('JavaScript').checked || document.getElementById('poll-JavaScript').checked) {
+   }else if(document.getElementById('JavaScript').checked) {
      console.log('JavaScript')
      radioSelected = 'JavaScript';
-   }else if(document.getElementById('APIs').checked || document.getElementById('poll-APIs').checked) {
+   }else if(document.getElementById('APIs').checked) {
      console.log('APIs')
      radioSelected = 'APIs';
-   }else if(document.getElementById('Node').checked || document.getElementById('poll-Node').checked) {
+   }else if(document.getElementById('Node').checked) {
      console.log('Node')
      radioSelected = 'Node';
-   }else if(document.getElementById('Express').checked || document.getElementById('poll-Express').checked) {
+   }else if(document.getElementById('Express').checked) {
      console.log('Express')
      radioSelected = 'Express';
-   }else if(document.getElementById('SQL').checked || document.getElementById('poll-SQL').checked) {
+   }else if(document.getElementById('SQL').checked) {
      console.log('SQL')
      radioSelected = 'SQL';
-   }else if(document.getElementById('NoSQL').checked || document.getElementById('poll-NoSQL').checked) {
+   }else if(document.getElementById('NoSQL').checked) {
      console.log('NoSQL')
      radioSelected = 'NoSQL';
-   }else if(document.getElementById('React').checked || document.getElementById('poll-React').checked) {
+   }else if(document.getElementById('React').checked) {
      console.log('React')
      radioSelected = 'React';
-   }else if(document.getElementById('MERN').checked || document.getElementById('poll-MERN').checked) {
+   }else if(document.getElementById('MERN').checked) {
      console.log('MERN')
      radioSelected = 'MERN';
+   }else if(document.getElementById('Resources').checked) {
+    console.log('Resources')
+    radioSelected = 'Resources';
+   }else if(document.getElementById('Networking').checked) {
+    console.log('Networking')
+    radioSelected = 'Networking';
    }
    return radioSelected;
  };
@@ -176,15 +182,15 @@ submitBtn.addEventListener('click', async (e) => {
 });
 
 //Event listener for the poll dropdown button
-dropdown.addEventListener('change', (e) => {
-  e.preventDefault;
-  dropdownOption(parseInt(dropdown.value));
-});
+// dropdown.addEventListener('change', (e) => {
+//   e.preventDefault;
+//   dropdownOption(parseInt(dropdown.value));
+// });
 
 //Event listener for the poll submit button
-pollBtn.addEventListener('click', (e) => {
-  e.preventDefault;
-  radioValue();
-  handleNewPoll();
-  document.location.href = 'homepage.html';
-});
+// pollBtn.addEventListener('click', (e) => {
+//   e.preventDefault;
+//   radioValue();
+//   handleNewPoll();
+//   document.location.href = 'homepage.html';
+// });
