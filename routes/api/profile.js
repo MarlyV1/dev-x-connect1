@@ -4,6 +4,7 @@ const { Profile } = require("../../models");
 router.post("/signup", async (req, res) => {
   try {
     const profileData = await Profile.create(req.body);
+    console.log(profileData);
     req.session.save(() => {
       req.session.user_id = profileData.id;
       req.session.logged_in = true;
