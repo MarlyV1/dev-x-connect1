@@ -69,7 +69,7 @@ postToHomepage();
 window.onload = function() {
     htmlPage.onclick = async function() {communityData('HTML')};
     cssPage.onclick = async function() {communityData('CSS')};
-    jsPage.onclick = async function() {communityData('JavaScipt')};
+    jsPage.onclick = async function() {communityData('JavaScript')};
     apiPage.onclick = async function() {communityData('APIs')};
     nodePage.onclick = async function() {communityData('Node.js')};
     expressPage.onclick = async function() {communityData('Express')};
@@ -77,11 +77,12 @@ window.onload = function() {
     nosqlPage.onclick = async function() {communityData('NoSQL')};
     reactPage.onclick = async function() {communityData('React')};
     mernPage.onclick = async function() {communityData('MERN')};
-    networkingPage.onclick = async function() {communityData('Networking')};
-    resourcesPage.onclick = async function() {communityData('Resources')};
+    networkingPage.onclick = function() {sources('Networking')};
+    resourcesPage.onclick = function() {sources('Resources')};
 }
 
 async function communityData(community) {
+    postInfo.innerHTML = '';
     const data = await reorderedData();
     pageHeading.innerText = `${community}`;
     data.forEach((e) => {
@@ -92,3 +93,11 @@ async function communityData(community) {
         }
     })
 };
+
+// Displays info for the networking and resources page
+function sources(page) {
+    //Makes sure the page is cleared of data relating to another page before new data is added
+    postInfo.innerHTML = '';
+    pageHeading.innerText = `${page}`;
+    // postInfo.innerHTML =
+}
