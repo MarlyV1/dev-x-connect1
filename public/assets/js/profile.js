@@ -36,9 +36,15 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     }
   }
 });
-//capture the input and make an API call to your backend.
+//capture the input and make an API call to the backend.
+document.getElementById('searchResults').addEventListener('submit', async (event) => {
+event.preventDefault(); // prevent default form submission
+await searchUserName(); //call the seach function
+})
+
 async function searchUserName() {
   const username = document.getElementById("seachInput").value;
-  const response = await fetch(`api/users/search?username=${username}`);
+  const response = await fetch(`api/users/search?username=${username}`); //GET request to the backend
   const data = await response.json();
+  document.getElementById('result').innerText = JSON.stringify(data, null, 2); //display result
 }
