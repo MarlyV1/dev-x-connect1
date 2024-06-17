@@ -84,14 +84,16 @@ window.onload = function() {
 async function communityData(community) {
     postInfo.innerHTML = '';
     const data = await reorderedData();
+    console.log(data)
     pageHeading.innerText = `${community}`;
+    let html = '';
     data.forEach((e) => {
         if(community === e.topic) {
-        postInfo.innerHTML += postMarkdown(e);
-        } else {
-            postInfo.innerHTML = '';
+            console.log(true);
+            html += postMarkdown(e);
         }
-    })
+    });
+    postInfo.innerHTML = html;
 };
 
 // Displays info for the networking and resources page
