@@ -9,7 +9,7 @@ router.post("/signup", async (req, res) => {
       req.session.user_id = profileData.id;
       req.session.logged_in = true;
 
-      res.status(200).json(profileData);
+      res.status(200).json({ user: profileData });
     });
   } catch (err) {
     res.status(400).json(err);

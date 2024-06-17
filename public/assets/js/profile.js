@@ -1,38 +1,27 @@
-document.querySelector("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const first_name = document.querySelector("#firstName").value;
-  const last_name = document.querySelector("#lastName").value;
-  const username = document.querySelector("#userName").value;
-  const password = document.querySelector("#password").value;
-  const phases = document.querySelectorAll(".form-check-input");
-  let phaseChoice;
-  //iterates through elements,adding a click event listener to each that updates the phaseChoice variable to the value of the clicked and checked element.
-  phases.forEach((phase) => {
-    phase.addEventListener("click", function () {
-      if (this.checked) {
-        phaseChoice = this.value;
-      }
-    });
-  });
-  //This code sends a POST request to create a new user, redirects to the profile page on success, or shows an alert with the error status on failure.
-  if (first_name && last_name && username && password) {
-    const response = await fetch("/api/users", {
-      method: "POST",
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        username,
-        password,
-        phaseChoice,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      document.location.replace("/profile");
-      console.log(submitted);
-    } else {
-      alert(response.statusText);
-    }
-  }
+window.addEventListener('DOMContentLoaded', (event) => {
+  const data = JSON.parse(window.localStorage.getItem('data'));
+  console.log(data);
+  profileData(data)
 });
+
+function profileData(data) {
+  const container = document.querySelector('.card-body');
+
+  const username = document.createElement('h1');
+  username.textContent = data.user.username;
+
+  const breakline = document.createElement('hr');
+
+
+  const name = document.createElement('h2');
+  name.textContent = data.user.first_name + ' ' + data.user.last_name;
+
+  const createDate = document.createElement('p');
+  const date = new Date(data.user.createdAt);
+  createDate.textContent = 'Member since' + ' ' + date.toLocaleDateString();
+
+  container.append(username);
+  container.append(breakline);
+  container.append(name);
+  container.append(createDate);
+};
