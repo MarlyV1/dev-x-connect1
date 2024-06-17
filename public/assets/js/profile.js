@@ -10,7 +10,10 @@ function profileData(data) {
   const username = document.createElement('h1');
   username.textContent = data.user.username;
 
-  const name = document.createElement('h3');
+  const breakline = document.createElement('hr');
+
+
+  const name = document.createElement('h2');
   name.textContent = data.user.first_name + ' ' + data.user.last_name;
 
   const createDate = document.createElement('p');
@@ -18,6 +21,7 @@ function profileData(data) {
   createDate.textContent = 'Member since' + ' ' + date.toLocaleDateString();
 
   container.append(username);
+  container.append(breakline);
   container.append(name);
   container.append(createDate);
 };
