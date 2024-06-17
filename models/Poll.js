@@ -2,11 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const dayJS = require('dayjs');
 
-//creating instance of Post from Model class
-class Post extends Model {}
+class Poll extends Model { }
 
-//setting columns + datatypes & rules
-Post.init(
+Poll.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -14,13 +12,25 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        title: {
+        poll_title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        message: {
+        poll_option_one: {
             type: DataTypes.TEXT,
             allowNull: false,
+        },
+        poll_option_two: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        poll_option_three: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+        },
+        poll_option_four: {
+            type: DataTypes.TEXT,
+            allowNull: true,
         },
         topic: {
             type: DataTypes.TEXT,
@@ -44,9 +54,8 @@ Post.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Post',
+        modelName: 'Poll',
     }
 );
 
-
-module.exports = Post;
+module.exports = Poll;

@@ -14,6 +14,11 @@ const database = async () => {
         individualHooks: true,
         returning: true,
     });
+
+    const post = await Post.bulkCreate(postData, {
+        individualHooks: true,
+        returning: true,
+    });
     
 }
 
