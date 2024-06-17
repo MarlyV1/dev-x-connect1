@@ -1,4 +1,16 @@
-const homepage = document.getElementById('display-post-data');
+const postInfo = document.getElementById('display-post-data');
+const pageHeading = document.getElementById('page-heading');
+const htmlPage = document.getElementById('html');
+const cssPage = document.getElementById('css');
+const jsPage = document.getElementById('js');
+const apiPage = document.getElementById('api');
+const nodePage = document.getElementById('node');
+const expressPage = document.getElementById('express');
+const sqlPage = document.getElementById('sql');
+const nosqlPage = document.getElementById('nosql');
+const reactPage = document.getElementById('react');
+const mernPage = document.getElementById('mern');
+
 
 //GET request method for the posts
 const getPosts = async () => {
@@ -46,56 +58,29 @@ const postToHomepage = async () => {
     });
 };
 
-//Displays posts to a specific community
-const postToCommunities = (data, topic, insert) => {
-    if(data.topic === topic) {
-        data.forEach((e) => {
-        insert.innerHTML += postMarkdown(e);
-        })
-    }
-};
 
-//Display the data to a certain page 
-function specificCommunities() {
-    const data = reorderedData();
-    let pageInsert = '';
-    let topic = '';
+//Page is displayed with posts from the topic the user clicks on
+window.onload = function() {
+    htmlPage.onclick = async function() {communityData('HTML')};
+    cssPage.onclick = async function() {communityData('CSS')};
+    jsPage.onclick = async function() {communityData('JavaScipt')};
+    apiPage.onclick = async function() {communityData('APIs')};
+    nodePage.onclick = async function() {communityData('Node.js')};
+    expressPage.onclick = async function() {communityData('Express')};
+    sqlPage.onclick = async function() {communityData('SQL')};
+    nosqlPage.onclick = async function() {communityData('NoSQL')};
+    reactPage.onclick = async function() {communityData('React')};
+    mernPage.onclick = async function() {communityData('MERN')};
+}
 
-    if (data.topic === "HTM") {
-        pageInsert = document.getElementById('display-post-data'); //page to insert the data
-        topic = "HTML";
-    } else if (data.topic === "CS") {
-        pageInsert = document.getElementById('display-post-data');
-        topic = "CSS";
-    } else if (data.topic === "JavaScript") {
-        pageInsert = document.getElementById('.display-post-data');
-        topic = "JavaScript";
-    } else if (data.topic === "APIs") {
-        pageInsert = document.getElementById('.display-post-data');
-        topic = "APIs";
-    } else if (data.topic === "Node.") {
-        pageInsert = document.getElementById('.display-post-data');
-        topic = "Node";
-    } else if (data.topic === "Express.") {
-        pageInsert = document.getElementById('display-post-data');
-        topic = "Express";
-    } else if (data.topic === "SQL.") {
-        pageInsert = document.getElementById('display-post-data');
-        topic = "SQL";
-    } else if (data.topic === "NoSQL.") {
-        pageInsert = document.getElementById('display-post-data');
-        topic = "NoSQL";
-    } else if (data.topic === "React.") {
-        pageInsert = document.getElementById('display-post-data');
-        topic = "React";
-    } else {
-        pageInsert = document.getElementById('display-post-data');
-        topic = "MERN";
-    }
-    postToCommunities(data, topic, pageInsert);
-};
-
-module.exports = {
-    postToHomepage,
-    specificCommunities
+async function communityData(community) {
+    const data = await reorderedData();
+    pageHeading.innerText = `${community}`;
+    data.forEach((e) => {
+        if(community === e.topic) {
+        postInfo.innerHTML += postMarkdown(e);
+        } else {
+            postInfo.innerHTML = '';
+        }
+    })
 };

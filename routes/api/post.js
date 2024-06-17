@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
     res.status(400).json(error.message)
     console.log(error.message)
   }
+
 })
 
 //Create new post
