@@ -303,7 +303,7 @@ h2 {
 
 /* Displayed posts styling */
 .display-post {
-  height: 400px;
+  height: 260px;
   width: 100%;
   background-color: rgba(19, 18, 66, 0.75);
   color: white;
@@ -362,4 +362,19 @@ h2 {
   .homepage-main {
     margin: 80px;
   }
+
+  .display-post{
+    height: 360px;
+  }
 }
+@media screen and (max-width: 762px) {
+  .display-post {
+    height: 385px
+  }
+}
+@media screen and (max-width: 500px) {
+  .display-post {
+    height: 430px
+  }
+}
+
