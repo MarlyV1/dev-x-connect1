@@ -39,7 +39,7 @@ const postMarkdown = (data) => {
     const markdown = `
     <div class="display-post card border-light mb-3">
         <div class="card-header">
-            <div>${data.profile_id}</div>
+            <div>${data.Profile.username}</div>
             <div>${data.date_of_post}</div>
             <div>${data.topic}</div>
         </div>
@@ -54,12 +54,16 @@ const postMarkdown = (data) => {
 
 //Displays all posts to the homepage
 const postToHomepage = async () => {
-    const data = reorderedData();
+    const data = await reorderedData();
+    console.log(data)
+    let homepage = '';
     await data.forEach((e) => {
-        homepage.innerHTML += postMarkdown(e);
+        homepage += postMarkdown(e);
     });
+    postInfo.innerHTML = homepage;
 };
 
+postToHomepage();
 
 //Page is displayed with posts from the topic the user clicks on
 window.onload = function() {

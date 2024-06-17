@@ -168,11 +168,12 @@ const radioValue = () => {
 
 
 //Event listener for the post submit button
-submitBtn.addEventListener('click', (e) => {
+submitBtn.addEventListener('click', async (e) => {
   e.preventDefault();
-  radioValue();
-  handleNewPost();
-  // postToHomepage();
+  const data = await radioValue();
+ handleNewPost();
+  console.log(data)
+  
   document.location.href = 'homepage.html';
 });
 
