@@ -18,6 +18,8 @@ router.get('/', async (req, res) => {
 //Create new post
 router.post('/', async (req, res) => {
   console.log(req.body)
+  console.log('user id', req.session.user_id)
+
   try {
     const newPost = await Post.create({...req.body, profile_id: req.session.user_id});
     res.status(200).json(newPost);

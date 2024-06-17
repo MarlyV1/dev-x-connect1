@@ -1,4 +1,3 @@
-// const { postToHomepage, specificCommunities } = require('./display-post');
 let title = document.querySelector('.title');
 let textarea = document.querySelector('.textarea');
 let radioSelected = '';
@@ -168,11 +167,11 @@ const radioValue = () => {
 
 
 //Event listener for the post submit button
-submitBtn.addEventListener('click', (e) => {
+submitBtn.addEventListener('click', async (e) => {
   e.preventDefault();
-  radioValue();
+  const data = await radioValue();
   handleNewPost();
-  // postToHomepage();
+  console.log(data)
   document.location.href = 'homepage.html';
 });
 

@@ -36,10 +36,16 @@ const reorderedData = async () => {
 
 //The markdown layout for the displayed posts
 const postMarkdown = (data) => {
+    const username ='';
+    if(!data.Profile.username){
+        username = 'BTCMP1212'
+    } else {
+        username = data.Profile.username
+    }
     const markdown = `
     <div class="display-post card border-light mb-3">
         <div class="card-header">
-            <div>${data.profile_id}</div>
+            <div>${username}</div>
             <div>${data.date_of_post}</div>
             <div>${data.topic}</div>
         </div>
@@ -54,18 +60,21 @@ const postMarkdown = (data) => {
 
 //Displays all posts to the homepage
 const postToHomepage = async () => {
-    const data = reorderedData();
+    const data = await reorderedData();
+    let homepage = '';
     await data.forEach((e) => {
-        homepage.innerHTML += postMarkdown(e);
+        homepage += postMarkdown(e);
     });
+    postInfo.innerHTML = homepage;
 };
 
+postToHomepage();
 
 //Page is displayed with posts from the topic the user clicks on
 window.onload = function() {
     htmlPage.onclick = async function() {communityData('HTML')};
     cssPage.onclick = async function() {communityData('CSS')};
-    jsPage.onclick = async function() {communityData('JavaScipt')};
+    jsPage.onclick = async function() {communityData('JavaScript')};
     apiPage.onclick = async function() {communityData('APIs')};
     nodePage.onclick = async function() {communityData('Node.js')};
     expressPage.onclick = async function() {communityData('Express')};
@@ -73,18 +82,29 @@ window.onload = function() {
     nosqlPage.onclick = async function() {communityData('NoSQL')};
     reactPage.onclick = async function() {communityData('React')};
     mernPage.onclick = async function() {communityData('MERN')};
-    networkingPage.onclick = async function() {communityData('Networking')};
-    resourcesPage.onclick = async function() {communityData('Resources')};
+    networkingPage.onclick = function() {sources('Networking')};
+    resourcesPage.onclick = function() {sources('Resources')};
 }
 
 async function communityData(community) {
+    postInfo.innerHTML = '';
     const data = await reorderedData();
+    console.log(data)
     pageHeading.innerText = `${community}`;
+    let html = '';
     data.forEach((e) => {
         if(community === e.topic) {
-        postInfo.innerHTML += postMarkdown(e);
-        } else {
-            postInfo.innerHTML = '';
+            console.log(true);
+            html += postMarkdown(e);
         }
-    })
+    });
+    postInfo.innerHTML = html;
 };
+
+// Displays info for the networking and resources page
+function sources(page) {
+    //Makes sure the page is cleared of data relating to another page before new data is added
+    postInfo.innerHTML = '';
+    pageHeading.innerText = `${page}`;
+    // postInfo.innerHTML =
+}

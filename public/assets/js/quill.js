@@ -5,7 +5,6 @@ const toolbarOptions = [
     ['blockquote', 'code-block'],
     ['link', 'image'],
     [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-    [{ 'color': [] }, { 'background': [] }],
     ['clean']
   ];
   
