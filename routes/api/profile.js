@@ -52,3 +52,18 @@ router.get("/profile/:username", async (req, res) => {
 });
 
 module.exports = router;
+
+// Add event listener to handle form submission
+document.getElementById('searchForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
+    await searchUserName(); // Call the search function
+});
+
+// Function to search user by username
+async function searchUserName() {
+    const username = document.getElementById("searchInput").value; // Get the username from input
+    const response = await fetch(`/api/users/search?username=${username}`); // Make GET request to backend
+    const data = await response.json(); // Parse JSON response
+    document.getElementById('result').innerText = JSON.stringify(data, null, 2); // Display result
+}
+
