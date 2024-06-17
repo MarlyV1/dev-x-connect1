@@ -39,7 +39,7 @@ Profile.init(
         },
         community_id: {
             type: DataTypes.INTEGER,
-            allowNull: true, 
+            allowNull: true,
             references: {
                 model: 'Community',
                 key: 'id',
