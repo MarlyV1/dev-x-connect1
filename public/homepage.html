@@ -60,39 +60,40 @@
                 <li class="mb-1">
                 <h4 class="sidebar-folders"><img src="./assets/images/icons/down-arrow.svg" alt="down arrow icon" width="15px" height="15px" class="icon"><img src="./assets/images/icons/folder.svg" alt="folder icon" width="20px" height="15px" class="icon">Phase One</h4>
                     <ul class="list-unstyled fw-normal pb-1 small">
-                      <li><a href="#" class="html rounded sidebar-pages"><img src="./assets/images/icons/html-icon.svg" alt="html logo" width="15px" height="15px" class="icon">HTML</a></li>
-                      <li><a href="#" class="css rounded sidebar-pages"><img src="./assets/images/icons/css-icon.svg" alt="css logo" width="15px" height="15px" class="icon">CSS</a></li>
-                      <li><a href="#" class="js rounded sidebar-pages"><img src="./assets/images/icons/javascript-icon.svg" alt="javascript logo" width="15px" height="15px" class="icon">JavaScript</a></li>
-                      <li><a href="#" class="api rounded sidebar-pages"><img src="./assets/images/icons/api-icon.svg" alt="api icon" width="15px" height="15px" class="icon">APIs</a></li>
+                      <li><a href="#" id="s-html" class="html rounded sidebar-pages"><img src="./assets/images/icons/html-icon.svg" alt="html logo" width="15px" height="15px" class="icon">HTML</a></li>
+                      <li><a href="#" id="s-css" class="css rounded sidebar-pages"><img src="./assets/images/icons/css-icon.svg" alt="css logo" width="15px" height="15px" class="icon">CSS</a></li>
+                      <li><a href="#" id="s-js" class="js rounded sidebar-pages"><img src="./assets/images/icons/javascript-icon.svg" alt="javascript logo" width="15px" height="15px" class="icon">JavaScript</a></li>
+                      <li><a href="#" id="s-api" class="api rounded sidebar-pages"><img src="./assets/images/icons/api-icon.svg" alt="api icon" width="15px" height="15px" class="icon">APIs</a></li>
                     </ul>
                 </li>
                 <li class="mb-1">
                   <h4 class="sidebar-folders"><img src="./assets/images/icons/down-arrow.svg" alt="down arrow icon" width="15px" height="15px" class="icon"><img src="./assets/images/icons/folder.svg" alt="folder icon" width="20px" height="15px" class="icon">Phase Two</h4>
                     <ul class="list-unstyled fw-normal pb-1 small">
-                      <li><a href="#" class="node rounded sidebar-pages"><img src="./assets/images/icons/node-js-icon.svg" alt="node.js logo" width="15px" height="15px" class="icon">Node.js</a></li>
-                      <li><a href="#" class="express rounded sidebar-pages"><img src="./assets/images/icons/express-icon.svg" alt="express.js logo" width="15px" height="15px" class="icon">Express.js</a></li>
-                      <li><a href="#" class="sql rounded sidebar-pages"><img src="./assets/images/icons/sql-icon.svg" alt="sql logo" width="15px" height="15px" class="icon">SQL</a></li>
+                      <li><a href="#" id="s-node" class="node rounded sidebar-pages"><img src="./assets/images/icons/node-js-icon.svg" alt="node.js logo" width="15px" height="15px" class="icon">Node.js</a></li>
+                      <li><a href="#" id="s-express" class="express rounded sidebar-pages"><img src="./assets/images/icons/express-icon.svg" alt="express.js logo" width="15px" height="15px" class="icon">Express.js</a></li>
+                      <li><a href="#" id="s-sql" class="sql rounded sidebar-pages"><img src="./assets/images/icons/sql-icon.svg" alt="sql logo" width="15px" height="15px" class="icon">SQL</a></li>
                     </ul>
                 </li>
                 <li class="mb-1">
                   <h4 class="sidebar-folders"><img src="./assets/images/icons/down-arrow.svg" alt="down arrow icon" width="15px" height="15px" class="icon"><img src="./assets/images/icons/folder.svg" alt="folder icon" width="20px" height="15px" class="icon">Phase Three</h4>
                     <ul class="list-unstyled fw-normal pb-1 small">
-                      <li><a href="#" class="nosql rounded sidebar-pages"><img src="./assets/images/icons/nosql-icon.svg" alt="nosql logo" width="15px" height="15px" class="icon">NoSQL</a></li>
-                      <li><a href="#" class="react rounded sidebar-pages"><img src="./assets/images/icons/react-icon.svg" alt="react logo" width="15px" height="15px" class="icon">React</a></li>
-                      <li><a href="#" class="mern rounded sidebar-pages"><img src="./assets/images/icons/mern-icon.svg" alt="MERN database icon" width="15px" height="15px" class="icon">MERN</a></li>
+                      <li><a href="#" id="s-nosql" class="nosql rounded sidebar-pages"><img src="./assets/images/icons/nosql-icon.svg" alt="nosql logo" width="15px" height="15px" class="icon">NoSQL</a></li>
+                      <li><a href="#" id="s-react" class="react rounded sidebar-pages"><img src="./assets/images/icons/react-icon.svg" alt="react logo" width="15px" height="15px" class="icon">React</a></li>
+                      <li><a href="#" id="s-mern" class="mern rounded sidebar-pages"><img src="./assets/images/icons/mern-icon.svg" alt="MERN database icon" width="15px" height="15px" class="icon">MERN</a></li>
                     </ul>
                 </li>
                 <li class="mb-1">
-                  <h4 class="networking sidebar-main-page"><img src="./assets/images/icons/networking-icon.svg" alt="networking icon" width="20px" height="15px" class="icon">Networking</h4>
+                  <h4 id="s-networking" class="networking sidebar-main-page"><img src="./assets/images/icons/networking-icon.svg" alt="networking icon" width="20px" height="15px" class="icon">Networking</h4>
                 </li>
                 <li class="mb-1">
-                  <h4 class="resources sidebar-main-page"><img src="./assets/images/icons/resources-icon.svg" alt="resources icon" width="20px" height="15px" class="icon">Resources</h4>
+                  <h4 id="s-resources" class="resources sidebar-main-page"><img src="./assets/images/icons/resources-icon.svg" alt="resources icon" width="20px" height="15px" class="icon">Resources</h4>
                 </li>
               </ul>
             </div>
-            <form class="d-flex search" role="search">
+            <form class="d-flex search" role="search" id="searchForm">
                 <input class="form-control me-2" type="search" placeholder="Search for user..." aria-label="Search">
                 <button class="btn search-btn nanum-gothic-coding-regular" type="submit">search()</button>
+                <div></div>
             </form>
           </div>
           </div>
