@@ -45,7 +45,8 @@ body {
 
 nav {
   width: 100%;
-  box-shadow: 0 10px 10px -10px #48abe0;
+  position: fixed;
+  top: 0;
 }
 
 .devx-title {
