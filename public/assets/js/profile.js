@@ -36,3 +36,17 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     }
   }
 });
+
+// Add event listener to handle form submission
+document.getElementById('searchForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
+    await searchUserName(); // Call the search function
+});
+
+// Function to search user by username
+async function searchUserName() {
+    const username = document.getElementById("searchInput").value; // username from input
+    const response = await fetch(`/api/users/search?username=${username}`); // Make GET request to backend
+    const data = await response.json(); // Parse response
+    document.getElementById('result').innerText = JSON.stringify(data, null, 2); // Display result
+}
