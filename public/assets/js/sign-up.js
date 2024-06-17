@@ -1,7 +1,9 @@
+const signupButton = document.querySelector('.sign-up-btn');
+
 //fetch API for sign up
-document.querySelector("form").addEventListener("submit", async (event) => {
+const userSignUp = async (event) => {
   event.preventDefault();
-  console.log("hit")
+
   // get input from input fields
   const first_name = document.querySelector("#firstName").value;
   const last_name = document.querySelector("#lastName").value;
@@ -22,7 +24,7 @@ document.querySelector("form").addEventListener("submit", async (event) => {
   //This code sends a POST request to create a new user, redirects to the profile page on success, or shows an alert with the error status on failure.
   if (first_name && last_name && username && password) {
     console.log("hit")
-    const response = await fetch("/api/profiles/signup", {
+      fetch("/api/profiles/signup", {
       method: "POST",
       body: JSON.stringify({
         first_name,
@@ -32,14 +34,23 @@ document.querySelector("form").addEventListener("submit", async (event) => {
         phaseChoice,
       }),
       headers: { "Content-Type": "application/json" },
-    });
+    })
     
     // response
-    if (response.ok) {
-      document.location.replace("/homepage.html");
-      console.log("submitted");
-    } else {
-      alert(response.statusText);
-    }
+    .then(response => {
+      console.log(response)
+      if (response.ok) {
+        return response.json()
+      } else {
+        alert(response.statusText);
+      }
+    })
+    .then(data => {
+      console.log('Data', data)
+      window.localStorage.setItem('data', JSON.stringify(data))
+      document.location.replace('/homepage.html')
+    })
   }
-});
+};
+
+signupButton.addEventListener('click', userSignUp);

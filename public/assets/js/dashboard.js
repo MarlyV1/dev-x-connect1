@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function displayData(data) {
+    console.log(data)
     const container = document.querySelector('.container');
 
     const username = document.createElement('h1');

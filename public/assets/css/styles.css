@@ -303,7 +303,7 @@ h2 {
 
 /* Displayed posts styling */
 .display-post {
-  height: 260px;
+  height: 400px;
   width: 100%;
   background-color: rgba(19, 18, 66, 0.75);
   color: white;
